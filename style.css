@@ -32,10 +32,6 @@
     text-indent: 0 !important;
     font-size: 20 !important;
 }
-.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
-  color: white;
-}
-
 .slideshow{
 
   margin-left: 25px;
@@ -94,9 +90,7 @@
 .ui-header{
   border: none;
 }
-.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
-  color: white;
-  }
+
 .logo{
   background-color: rgb(25,25,25,1);
 
