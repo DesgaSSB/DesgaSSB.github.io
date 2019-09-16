@@ -140,10 +140,13 @@
 
 .lorips{
     width: auto;
+    height: auto:
     margin-top: 15;
     color: #2C3539;
     background-color: white;
+    margin-right: 80;
     margin-left: 80;
+    margin-bottom: 15;
     float: left;
 }
 .loggedin{
