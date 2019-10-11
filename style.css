@@ -1,6 +1,9 @@
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 	background-color: #000080;
-	}
+  }
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited{
+  color:white;
+  }
 
 .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
   background-color: rgba(0,0,0,.6);
@@ -149,24 +152,38 @@
   width: 450;
 }
 .portrait {
+  float: left;
+  width: 300;
+  height: 300;
+  margin-bottom: 5px;
+}
+.logo {
   float: right;
-  margin-left: 25;
-  width: 250;
-  height: 250;
-  margin-right: 25;
-  margin-top: 25;
-  margin-bottom: 25;
-}
-.linkedin {
-  float: right !important;
-  padding: 0px 0px !important;
-}
-.LIicon {
-  height: 35;
-  width: 35;
-  padding: 10px 10px;
+  width: 150px;
+  height: 150px;
+  margin: 0px 0px 0px 10px;
 }
 
-.linkedin .active{
-  
+
+.outer{
+  display: flex; 
+  width:90%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left:5%;
+  margin-right:5%;
 }
+.aboutMain{
+  text-align:center;
+  width:90%; 
+  margin-left:5%; 
+  margin-right:5%; 
+  line-height: 30px;
+}
+.about{
+  width:300; 
+  text-align:center;
+  margin:20px;
+  line-height: 20px;
+}
+
