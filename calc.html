@@ -224,11 +224,11 @@
 				p1 = data[u1][m1].advantage;
 			}
 			catch (err) {
-				document.getElementById("output").innerHTML = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto'>The attacking character cannot use the move that is selected</div>";
+				document.getElementById("output").innerHTML = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'>The attacking character cannot use the move that is selected</div>";
 			}
 			p2 = data[u2];
 			arrU = Object.keys(data[u2])
-			out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto'><ul>";
+			out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul>";
 			for (var i = 0; i < arrU.length; i++) {
 				tempMove = p2[arrU[i]].startup + 11;
 				if (arrU[i].includes("Air")) {
