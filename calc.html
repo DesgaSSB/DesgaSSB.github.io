@@ -254,7 +254,121 @@
 						"advantage": 100
 					}
 				},
+				"Ridley": {
+					"Jab": {
+						"startup": 4,
+						"landinglag": 0,
+						"advantage": -25
+					},
+					"RapidJab": {
+						"startup": 4,
+						"landinglag": 0,
+						"advantage": -38
+					},
+					"ForwardTilt": {
+						"startup": 10,
+						"landinglag": 0,
+						"advantage": -12 - 10
+					},
+					"UpTilt": {
+						"startup": 8,
+						"landinglag": 0,
+						"advantage": -12
+					},
+					"DownTilt": {
+						"startup": 9,
+						"landinglag": 0,
+						"advantage": -12
+					},
+					"DashAttack": {
+						"startup": 12,
+						"landinglag": 0,
+						"advantage": -16
+					},
+					"ForwardSmash": {
+						"startup": 18,
+						"landinglag": 0,
+						"advantage": -22
+					},
+					"UpSmash": {
+						"startup": 12,
+						"landinglag": 0,
+						"advantage": -24
+					},
+					"DownSmash": {
+						"startup": 24,
+						"landinglag": 0,
+						"advantage": -22
+					},
+					"NeutralAir": {
+						"startup": 8,
+						"landinglag": 12,
+						"advantage": -7
+					},
+					"ForwardAir": {
+						"startup": 10,
+						"landinglag": 16,
+						"advantage": -13
+					},
+					"BackAir": {
+						"startup": 10,
+						"landinglag": 17,
+						"advantage": -12
+					},
+					"UpAir": {
+						"startup": 11,
+						"landinglag": 14,
+						"advantage": -9
+					},
+					"DownAir": {
+						"startup": 11,
+						"landinglag": 32,
+						"advantage": -27
+					},
+					"NeutralB": {
+						"startup": 29,
+						"landinglag": 0,
+						"advantage": 100
+					},
+					"SideB": {
+						"startup": 22,
+						"landinglag": 0,
+						"advantage": 100
+					},
+					"UpB": {
+						"startup": 37,
+						"landinglag": 3235,
+						"advantage": -32
+					},
+					"UpBAir": {
+						"startup": 37,
+						"landinglag": 3235,
+						"advantage": -32
+					},
+					"DownB": {
+						"startup": 30,
+						"landinglag": 0,
+						"advantage": -29
+					},
+					"DownBAir": {
+						"startup": 30,
+						"landinglag": 0,
+						"advantage": -29
+					},
+					"Grab": {
+						"startup": 8,
+						"advantage": 100
+					},
+					"DashGrab": {
+						"startup": 11,
+						"advantage": 100
+					},
+					"PivotGrab": {
+						"startup": 12,
+						"advantage": 100
+					}
 
+				}
 
 			};
 			u1 = document.getElementById("set").char1.value;
@@ -276,7 +390,7 @@
 					tempMove -= 2;
 				}
 				tempMove = 0 - tempMove;
-				if (tempMove > p1 && arrU[i] != "UpBAir" && arrU[i] != "SideBAir")  {
+				if (tempMove > p1 && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
 					out += "<li>"
 					out += arrU[i];
 					out += "</li>";
@@ -320,10 +434,10 @@
 						<option value="">- Character -</option>
 						<option value="DK">Donkey Kong</option>
 						<option value="Greninja">Greninja</option>
-						<option value="Incineroar">Incineroar</option>
 						<option value="Lucas">Lucas</option>
 						<option value="MetaKnight">Meta Knight</option>
 						<option value="Plant">Piranah Plant</option>
+						<option value="Ridley">Ridley</option>
 					</select>
 					<select name="move1" id="move1">
 						<option value="">- Move -</option>
@@ -359,6 +473,7 @@
 						<option value="Lucas">Lucas</option>
 						<option value="MetaKnight">Meta Knight</option>
 						<option value="Plant">Piranah Plant</option>
+						<option value="Ridley">Ridley</option>
 					</select>
 
 				</div>
