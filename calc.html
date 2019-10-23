@@ -220,18 +220,17 @@
 			u1 = document.getElementById("set").char1.value;
 			m1 = document.getElementById("set").move1.value;
 			u2 = document.getElementById("set").char2.value;
-			p1 = data[u1][m1].advantage;
+			try {
+				p1 = data[u1][m1].advantage;
+			}
+			catch (err) {
+				document.getElementById("output").innerHTML = "The attacking character cannot use the move that is selected";
+			}
 			p2 = data[u2];
 			arrU = Object.keys(data[u2])
 			out = "<ul>";
 			for (var i = 0; i < arrU.length; i++) {
-				try{
-					tempMove = p2[arrU[i]].startup + 11;
-				}
-				catch(err){
-					document.getElementById("output").innerHTML = "The attacking character cannot use the move that is selected";
-				}
-				
+				tempMove = p2[arrU[i]].startup + 11;
 				if (arrU[i].includes("Air")) {
 					tempMove -= 8;
 				}
@@ -241,7 +240,7 @@
 				if (arrU[i].includes("Pivot") || arrU[i].includes("Dash")) {
 					tempMove -= 2;
 				}
-				
+
 				tempMove = 0 - tempMove;
 				if (tempMove > p1 && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
 					out += "<li>"
