@@ -266,7 +266,7 @@
 			out = "<ul>";
 			for (var i = 0; i < arrU.length; i++) {
 				tempMove = p2[arrU[i]].startup + 11;
-				if (arrU[i].includes("Air") && !arrU[i].includes("UpB")) {
+				if (arrU[i].includes("Air")) {
 					tempMove -= 8;
 				}
 				if ((arrU[i].includes("Up") || arrU[i].includes("Grab")) && !arrU[i].includes("Tilt") && !arrU[i].includes("Air")) {
