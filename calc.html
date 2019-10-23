@@ -230,19 +230,20 @@
 			arrU = Object.keys(data[u2])
 			out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
 			for (var i = 0; i < arrU.length; i++) {
-				tempMove = p2[arrU[i]].startup + 11;
-				if (arrU[i].includes("Air")) {
-					tempMove -= 8;
+				tempMove = p2[arrU[i]].startup;
+				if (arrU[i].includes("Air") && !arrU[i].includes("BAir")){
+					tempMove += 3;
 				}
-				if ((arrU[i].includes("Up") || arrU[i].includes("Grab")) && !arrU[i].includes("Tilt") && !arrU[i].includes("Air") && !arrU[i].includes("Dash") && !arrU[i].includes("Pivot")) {
-					tempMove -= 11;
+                                else{
+				if (arrU[i]==("UpSmash") || arrU[i]==("Grab")||arrU[i]==("UpB")) {
+					tempMove+=0:
 				}
-				if (arrU[i].includes("Pivot") || arrU[i].includes("Dash")) {
-					tempMove -= 2;
-				}
-
+                                else{
+				if (arrU[i] == ("Pivot Grab") || arrU[i].includes("Dash")) {
+					tempMove += 17;
+				}}}
 				tempMove = 0 - tempMove;
-				if (tempMove > p1 && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
+				if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
 					out += "<li>"
 					out += arrU[i];
 					out += "</li>";
