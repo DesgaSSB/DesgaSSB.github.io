@@ -235,13 +235,18 @@
 					tempMove += 3;
 				}
                                 else{
-				if (arrU[i]==("UpSmash") || arrU[i]==("Grab")||arrU[i]==("UpB")) {
+				     if (arrU[i]==("UpSmash") || arrU[i]==("Grab")||arrU[i]==("UpB")) {
 					tempMove+=0:
-				}
-                                else{
-				if (arrU[i] == ("Pivot Grab") || arrU[i].includes("Dash")) {
-					tempMove += 17;
-				}}}
+				     }
+                                     else{
+				          if (arrU[i] == ("Pivot Grab") || arrU[i].includes("Dash")) {
+					     tempMove += 17;
+				          }
+                                          else{
+                                               tempMove+=11;
+                                          } 
+                                     }
+                                }
 				tempMove = 0 - tempMove;
 				if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
 					out += "<li>"
