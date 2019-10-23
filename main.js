@@ -42,14 +42,14 @@
 		// Off-Canvas Navigation.
 
 			// Navigation Panel Toggle.
-				$('<a href="#navPanel" class="navPanelToggle"></a>')
+				$('<a href="#navPanel" class="navPanelToggle"style="height:50px"></a>')
 					.appendTo($body);
 
 			// Navigation Panel.
 				$(
 					'<div id="navPanel">' +
 						$('#nav').html() +
-						'<a href="#navPanel" class="close" style="height:50px"></a>' +
+						'<a href="#navPanel" class="close" ></a>' +
 					'</div>'
 				)
 					.appendTo($body)
