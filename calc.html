@@ -272,6 +272,9 @@
 				if (arrU[i].includes("Up") || arrU[i].includes("Grab") && !arrU[i].includes("Tilt") && !arrU[i].includes("Air")) {
 					tempMove -= 11;
 				}
+				if (arrU[i].includes("Pivot") || arrU[i].includes("Dash")) {
+					tempMove -= 2;
+				}
 				tempMove = 0 - tempMove;
 				if (tempMove > p1 && arrU[i] != "UpBAir") {
 					out += "<li>"
