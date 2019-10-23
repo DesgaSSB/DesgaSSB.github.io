@@ -7,261 +7,388 @@
 <html>
 
 <head>
-    <title>Drexel Smash Ultimate Safe on Shield Calculator</title>
-    <meta name="description" content="Shield safety calculator for smash ultimate">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="main.css" />
-    <script>
-        function getMove() {
-            data = {
-                "DK": {
-                    "Jab": { "startup": 5, "landinglag": 0, "advantage": -24 },
-                    "RapidJab": { "startup": 100, "landinglag": 0, "advantage": -100 },
-                    "ForwardTilt": { "startup": 7, "landinglag": 0, "advantage": -19 },
-                    "UpTilt": { "startup": 5, "landinglag": 0, "advantage": -23 },
-                    "DownTilt": { "startup": 6, "landinglag": 0, "advantage": -12 },
-                    "DashAttack": { "startup": 9, "landinglag": 0, "advantage": -14 },
-                    "ForwardSmash": { "startup": 22, "landinglag": 0, "advantage": -18 },
-                    "UpSmash": { "startup": 14, "landinglag": 0, "advantage": -22 },
-                    "DownSmash": { "startup": 11, "landinglag": 0, "advantage": -33 },
-                    "NeutralAir": { "startup": 10, "landinglag": 10, "advantage": -6 },
-                    "ForwardAir": { "startup": 18, "landinglag": 17, "advantage": -11 },
-                    "BackAir": { "startup": 7, "landinglag": 11, "advantage": -6 },
-                    "UpAir": { "startup": 6, "landinglag": 15, "advantage": -10 },
-                    "ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
-                    "DownAir": { "startup": 14, "landinglag": 14, "advantage": -8 },
-                    "NeutralB": { "startup": 19, "landinglag": 0, "advantage": -4 },
-                    "SideB": { "startup": 20, "landinglag": 0, "advantage": -32 },
-                    "UpB": { "startup": 19, "landinglag": 0, "advantage": -37 },
-                    "UpBAir": { "startup": 4, "landinglag": 38, "advantage": 1000 },
-                    "DownB": { "startup": 15, "landinglag": 0, "advantage": -23 },
-                    "DownBAir": { "startup": 19, "landinglag": 10, "advantage": -4 }
-                },
-                "Greninja": {
-                    "Jab": { "startup": 3, "landinglag": 0, "advantage": -26 },
-                    "RapidJab": { "startup": 4, "landinglag": 0, "advantage": -39 },
-                    "ForwardTilt": { "startup": 10, "landinglag": 0, "advantage": -14 },
-                    "UpTilt": { "startup": 9, "landinglag": 0, "advantage": -18 },
-                    "DownTilt": { "startup": 5, "landinglag": 0, "advantage": -12 },
-                    "DashAttack": { "startup": 7, "landinglag": 0, "advantage": -13 },
-                    "ForwardSmash": { "startup": 13, "landinglag": 0, "advantage": -26 },
-                    "UpSmash": { "startup": 12, "landinglag": 0, "advantage": -23 },
-                    "DownSmash": { "startup": 11, "landinglag": 0, "advantage": -29 },
-                    "NeutralAir": { "startup": 12, "landinglag": 7, "advantage": -3 },
-                    "ForwardAir": { "startup": 16, "landinglag": 11, "advantage": -6 },
-                    "ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
-                    "BackAir": { "startup": 5, "landinglag": 10, "advantage": -7 },
-                    "UpAir": { "startup": 7, "landinglag": 14, "advantage": -12 },
-                    "DownAir": { "startup": 17, "landinglag": 30, "advantage": -16 },
-                    "NeutralB": { "startup": 60, "landinglag": 0, "advantage": -13 },
-                    "SideB": { "startup": 24, "landinglag": 0, "advantage": -28 },
-                    "UpB": { "startup": 19, "landinglag": 32, "advantage": 0 },
-                    "UpBAir": { "startup": 19, "landinglag": 32, "advantage": 0 },
-                    "DownB": { "startup": 8, "landinglag": 0, "advantage": -32 },
-                    "DownBAir": { "startup": 8, "landinglag": 0, "advantage": -32 }
-                },
-                "MetaKnight": {
-                    "Jab": { "startup": 4, "landinglag": 0, "advantage": -24 },
-                    "RapidJab": { "startup": 4, "landinglag": 0, "advantage": -24 },
-                    "ForwardTilt": { "startup": 6, "landinglag": 0, "advantage": -23 },
-                    "UpTilt": { "startup": 8, "landinglag": 0, "advantage": -19 },
-                    "DownTilt": { "startup": 3, "landinglag": 0, "advantage": -9 },
-                    "DashAttack": { "startup": 7, "landinglag": 0, "advantage": -18 },
-                    "ForwardSmash": { "startup": 24, "landinglag": 0, "advantage": -6 },
-                    "UpSmash": { "startup": 8, "landinglag": 0, "advantage": -28 },
-                    "DownSmash": { "startup": 49, "landinglag": 0, "advantage": -19 },
-                    "NeutralAir": { "startup": 6, "landinglag": 7, "advantage": -3 },
-                    "ForwardAir": { "startup": 9, "landinglag": 10, "advantage": -8 },
-                    "ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
-                    "BackAir": { "startup": 7, "landinglag": 11, "advantage": -8 },
-                    "UpAir": { "startup": 6, "landinglag": 9, "advantage": -6 },
-                    "DownAir": { "startup": 4, "landinglag": 9, "advantage": -6 },
-                    "NeutralB": { "startup": 12, "landinglag": 29, "advantage": -81 },
-                    "SideB": { "startup": 26, "landinglag": 26, "advantage": -24 },
-                    "UpB": { "startup": 8, "landinglag": 30, "advantage": -100 },
-                    "UpBAirAir": { "startup": 720, "landinglag": 30, "advantage": -100 },
-                    "DownB": { "startup": 34, "landinglag": 30, "advantage": -44 },
-                    "DownBAir": { "startup": 34, "landinglag": 30, "advantage": -44 }
-                },
-                "Plant": {
-                    "Jab": { "startup": 2, "landinglag": 0, "advantage": -13 },
-                    "RapidJab": { "startup": 6, "landinglag": 0, "advantage": -29 },
-                    "ForwardTilt1": { "startup": 7, "landinglag": 0, "advantage": -20 },
-                    "UpTilt": { "startup": 8, "landinglag": 0, "advantage": -14 },
-                    "DownTilt": { "startup": 9, "landinglag": 0, "advantage": -12 },
-                    "DashAttack": { "startup": 7, "landinglag": 0, "advantage": -28 },
-                    "ForwardSmash": { "startup": 16, "landinglag": 0, "advantage": -22 },
-                    "UpSmash": { "startup": 12, "landinglag": 0, "advantage": -27 },
-                    "DownSmash": { "startup": 12, "landinglag": 0, "advantage": -24 },
-                    "NeutralAir": { "startup": 8, "landinglag": 15, "advantage": -13 },
-                    "ForwardAir": { "startup": 10, "landinglag": 13, "advantage": -9 },
-                    "ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
-                    "BackAir": { "startup": 14, "landinglag": 16, "advantage": -11 },
-                    "UpAir": { "startup": 7, "landinglag": 10, "advantage": -6 },
-                    "DownAir": { "startup": 9, "landinglag": 18, "advantage": -14 },
-                    "NeutralB": { "startup": 9, "landinglag": 0, "advantage": +7 },
-                    "SideB": { "startup": 23, "landinglag": 0, "advantage": -100 },
-                    "UpB": { "startup": 13, "landinglag": 20, "advantage": -100 },
-                    "UpBAir": { "startup": 13, "landinglag": 20, "advantage": -100 },
-                    "DownB": { "startup": 20, "landinglag": 0, "advantage": -10 },
-                    "DownBAir": { "startup": 20, "landinglag": 0, "advantage": -10 }
-                },
-                "Lucas": {
-                    "Jab": { "startup": 2, "landinglag": 0, "advantage": -19 },
-                    "RapidJab": { "startup": 100, "landinglag": 0, "advantage": -100 },
-                    "ForwardTilt": { "startup": 7, "landinglag": 0, "advantage": -8 },
-                    "UpTilt": { "startup": 47, "landinglag": 0, "advantage": -18 },
-                    "DownTilt": { "startup": 3, "landinglag": 0, "advantage": -6 },
-                    "DashAttack": { "startup": 13, "landinglag": 0, "advantage": -12 },
-                    "ForwardSmash": { "startup": 14, "landinglag": 0, "advantage": -21 },
-                    "UpSmash": { "startup": 28, "landinglag": 0, "advantage": -54 },
-                    "DownSmash": { "startup": 20, "landinglag": 0, "advantage": -12 },
-                    "NeutralAir": { "startup": 7, "landinglag": 12, "advantage": -9 },
-                    "ForwardAir": { "startup": 9, "landinglag": 7, "advantage": -2 },
-                    "BackAir": { "startup": 15, "landinglag": 9, "advantage": -4 },
-                    "UpAir": { "startup": 7, "landinglag": 7, "advantage": -3 },
-                    "DownAir": { "startup": 10, "landinglag": 16, "advantage": -13 },
-                    "ZAir": { "startup": 9, "landinglag": 8, "advantage": -2 },
-                    "NeutralB": { "startup": 40, "landinglag": 0, "advantage": -5 },
-                    "SideB": { "startup": 21, "landinglag": 22, "advantage": -24 },
-                    "UpB": { "startup": 20, "landinglag": 0, "advantage": -21 },
-                    "UpBAir": { "startup": 20, "landinglag": 0, "advantage": -21 },
-                    "DownB": { "startup": 19, "landinglag": 0, "advantage": 0 },
-                    "DownAir": { "startup": 19, "landinglag": 0, "advantage": 0 }
-                }
-            };
-            u1 = document.getElementById("set").char1.value;
-            m1 = document.getElementById("set").move1.value;
-            u2 = document.getElementById("set").char2.value;
-            p1 = data[u1][m1].advantage;
-            p2 = data[u2];
-            arrU = Object.keys(data[u2])
-            out = "<ul>";
-            for (var i = 0; i < arrU.length; i++) {
-                tempMove = p2[arrU[i]].startup + 11;
-                if (arrU[i].includes("Air") && !arrU[i].includes("UpB")) {
-                    tempMove -= 8;
-                }
-                if (arrU[i].includes("Up") && !arrU[i].includes("Tilt") && !arrU[i].includes("Air")) {
-                    tempMove -= 11;
-                }
-                tempMove = 0 - tempMove;
-                if (tempMove > p1 && arrU[i] != "UpBAir") {
-                    out += "<li>"
-                    out += arrU[i];
-                    out += "</li>";
-                }
-            }
-            if (out == "<ul>") {
-                out += "Safe On Shield";
-            }
-            document.getElementById("output").innerHTML = out + "</ul>";
-        }
-    </script>
+	<title>Drexel Smash Ultimate Safe on Shield Calculator</title>
+	<meta name="description" content="Shield safety calculator for smash ultimate">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="main.css" />
+	<script>
+		function getMove() {
+			data = {
+				"DK": {
+					"Jab": { "startup": 5, "landinglag": 0, "advantage": -24 },
+					"RapidJab": { "startup": 100, "landinglag": 0, "advantage": -100 },
+					"ForwardTilt": { "startup": 7, "landinglag": 0, "advantage": -19 },
+					"UpTilt": { "startup": 5, "landinglag": 0, "advantage": -23 },
+					"DownTilt": { "startup": 6, "landinglag": 0, "advantage": -12 },
+					"DashAttack": { "startup": 9, "landinglag": 0, "advantage": -14 },
+					"ForwardSmash": { "startup": 22, "landinglag": 0, "advantage": -18 },
+					"UpSmash": { "startup": 14, "landinglag": 0, "advantage": -22 },
+					"DownSmash": { "startup": 11, "landinglag": 0, "advantage": -33 },
+					"NeutralAir": { "startup": 10, "landinglag": 10, "advantage": -6 },
+					"ForwardAir": { "startup": 18, "landinglag": 17, "advantage": -11 },
+					"BackAir": { "startup": 7, "landinglag": 11, "advantage": -6 },
+					"UpAir": { "startup": 6, "landinglag": 15, "advantage": -10 },
+					"ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
+					"DownAir": { "startup": 14, "landinglag": 14, "advantage": -8 },
+					"NeutralB": { "startup": 19, "landinglag": 0, "advantage": -4 },
+					"SideB": { "startup": 20, "landinglag": 0, "advantage": -32 },
+					"UpB": { "startup": 19, "landinglag": 0, "advantage": -37 },
+					"UpBAir": { "startup": 4, "landinglag": 38, "advantage": 1000 },
+					"DownB": { "startup": 15, "landinglag": 0, "advantage": -23 },
+					"DownBAir": { "startup": 19, "landinglag": 10, "advantage": -4 },
+					"Grab": { "startup": 8, "advantage": 100 },
+					"DashGrab": { "startup": 11, "advantage": 100 },
+					"PivotGrab": { "startup": 12, "advantage": 100 }
+				},
+				"Greninja": {
+					"Jab": { "startup": 3, "landinglag": 0, "advantage": -26 },
+					"RapidJab": { "startup": 4, "landinglag": 0, "advantage": -39 },
+					"ForwardTilt": { "startup": 10, "landinglag": 0, "advantage": -14 },
+					"UpTilt": { "startup": 9, "landinglag": 0, "advantage": -18 },
+					"DownTilt": { "startup": 5, "landinglag": 0, "advantage": -12 },
+					"DashAttack": { "startup": 7, "landinglag": 0, "advantage": -13 },
+					"ForwardSmash": { "startup": 13, "landinglag": 0, "advantage": -26 },
+					"UpSmash": { "startup": 12, "landinglag": 0, "advantage": -23 },
+					"DownSmash": { "startup": 11, "landinglag": 0, "advantage": -29 },
+					"NeutralAir": { "startup": 12, "landinglag": 7, "advantage": -3 },
+					"ForwardAir": { "startup": 16, "landinglag": 11, "advantage": -6 },
+					"ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
+					"BackAir": { "startup": 5, "landinglag": 10, "advantage": -7 },
+					"UpAir": { "startup": 7, "landinglag": 14, "advantage": -12 },
+					"DownAir": { "startup": 17, "landinglag": 30, "advantage": -16 },
+					"NeutralB": { "startup": 60, "landinglag": 0, "advantage": -13 },
+					"SideB": { "startup": 24, "landinglag": 0, "advantage": -28 },
+					"UpB": { "startup": 19, "landinglag": 32, "advantage": 0 },
+					"UpBAir": { "startup": 19, "landinglag": 32, "advantage": 0 },
+					"DownB": { "startup": 8, "landinglag": 0, "advantage": -32 },
+					"DownBAir": { "startup": 8, "landinglag": 0, "advantage": -32 },
+					"Grab": { "startup": 10, "advantage": 100 },
+					"DashGrab": { "startup": 13, "advantage": 100 },
+					"PivotGrab": { "startup": 14, "advantage": 100 }
+				},
+				"MetaKnight": {
+					"Jab": { "startup": 4, "landinglag": 0, "advantage": -24 },
+					"RapidJab": { "startup": 4, "landinglag": 0, "advantage": -24 },
+					"ForwardTilt": { "startup": 6, "landinglag": 0, "advantage": -23 },
+					"UpTilt": { "startup": 8, "landinglag": 0, "advantage": -19 },
+					"DownTilt": { "startup": 3, "landinglag": 0, "advantage": -9 },
+					"DashAttack": { "startup": 7, "landinglag": 0, "advantage": -18 },
+					"ForwardSmash": { "startup": 24, "landinglag": 0, "advantage": -6 },
+					"UpSmash": { "startup": 8, "landinglag": 0, "advantage": -28 },
+					"DownSmash": { "startup": 49, "landinglag": 0, "advantage": -19 },
+					"NeutralAir": { "startup": 6, "landinglag": 7, "advantage": -3 },
+					"ForwardAir": { "startup": 9, "landinglag": 10, "advantage": -8 },
+					"ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
+					"BackAir": { "startup": 7, "landinglag": 11, "advantage": -8 },
+					"UpAir": { "startup": 6, "landinglag": 9, "advantage": -6 },
+					"DownAir": { "startup": 4, "landinglag": 9, "advantage": -6 },
+					"NeutralB": { "startup": 12, "landinglag": 29, "advantage": -81 },
+					"SideB": { "startup": 26, "landinglag": 26, "advantage": -24 },
+					"UpB": { "startup": 8, "landinglag": 30, "advantage": -100 },
+					"UpBAirAir": { "startup": 720, "landinglag": 30, "advantage": -100 },
+					"DownB": { "startup": 34, "landinglag": 30, "advantage": -44 },
+					"DownBAir": { "startup": 34, "landinglag": 30, "advantage": -44 },
+					"Grab": { "startup": 7, "advantage": 100 },
+					"DashGrab": { "startup": 11, "advantage": 100 },
+					"PivotGrab": { "startup": 12, "advantage": 100 }
+				},
+				"Plant": {
+					"Jab": { "startup": 2, "landinglag": 0, "advantage": -13 },
+					"RapidJab": { "startup": 6, "landinglag": 0, "advantage": -29 },
+					"ForwardTilt1": { "startup": 7, "landinglag": 0, "advantage": -20 },
+					"UpTilt": { "startup": 8, "landinglag": 0, "advantage": -14 },
+					"DownTilt": { "startup": 9, "landinglag": 0, "advantage": -12 },
+					"DashAttack": { "startup": 7, "landinglag": 0, "advantage": -28 },
+					"ForwardSmash": { "startup": 16, "landinglag": 0, "advantage": -22 },
+					"UpSmash": { "startup": 12, "landinglag": 0, "advantage": -27 },
+					"DownSmash": { "startup": 12, "landinglag": 0, "advantage": -24 },
+					"NeutralAir": { "startup": 8, "landinglag": 15, "advantage": -13 },
+					"ForwardAir": { "startup": 10, "landinglag": 13, "advantage": -9 },
+					"ZAir": { "startup": 100, "landinglag": 15, "advantage": -100 },
+					"BackAir": { "startup": 14, "landinglag": 16, "advantage": -11 },
+					"UpAir": { "startup": 7, "landinglag": 10, "advantage": -6 },
+					"DownAir": { "startup": 9, "landinglag": 18, "advantage": -14 },
+					"NeutralB": { "startup": 9, "landinglag": 0, "advantage": +7 },
+					"SideB": { "startup": 23, "landinglag": 0, "advantage": -100 },
+					"UpB": { "startup": 13, "landinglag": 20, "advantage": -100 },
+					"UpBAir": { "startup": 13, "landinglag": 20, "advantage": -100 },
+					"DownB": { "startup": 20, "landinglag": 0, "advantage": -10 },
+					"DownBAir": { "startup": 20, "landinglag": 0, "advantage": -10 },
+					"Grab": { "startup": 6, "advantage": 100 },
+					"DashGrab": { "startup": 9, "advantage": 100 },
+					"PivotGrab": { "startup": 9, "advantage": 100 }
+				},
+				"Lucas": {
+					"Jab": { "startup": 2, "landinglag": 0, "advantage": -19 },
+					"RapidJab": { "startup": 100, "landinglag": 0, "advantage": -100 },
+					"ForwardTilt": { "startup": 7, "landinglag": 0, "advantage": -8 },
+					"UpTilt": { "startup": 47, "landinglag": 0, "advantage": -18 },
+					"DownTilt": { "startup": 3, "landinglag": 0, "advantage": -6 },
+					"DashAttack": { "startup": 13, "landinglag": 0, "advantage": -12 },
+					"ForwardSmash": { "startup": 14, "landinglag": 0, "advantage": -21 },
+					"UpSmash": { "startup": 28, "landinglag": 0, "advantage": -54 },
+					"DownSmash": { "startup": 20, "landinglag": 0, "advantage": -12 },
+					"NeutralAir": { "startup": 7, "landinglag": 12, "advantage": -9 },
+					"ForwardAir": { "startup": 9, "landinglag": 7, "advantage": -2 },
+					"BackAir": { "startup": 15, "landinglag": 9, "advantage": -4 },
+					"UpAir": { "startup": 7, "landinglag": 7, "advantage": -3 },
+					"DownAir": { "startup": 10, "landinglag": 16, "advantage": -13 },
+					"ZAir": { "startup": 9, "landinglag": 8, "advantage": -2 },
+					"NeutralB": { "startup": 40, "landinglag": 0, "advantage": -5 },
+					"SideB": { "startup": 21, "landinglag": 22, "advantage": -24 },
+					"UpB": { "startup": 20, "landinglag": 0, "advantage": -21 },
+					"UpBAir": { "startup": 20, "landinglag": 0, "advantage": -21 },
+					"DownB": { "startup": 19, "landinglag": 0, "advantage": 0 },
+					"DownAir": { "startup": 19, "landinglag": 0, "advantage": 0 },
+					"Grab": { "startup": 12, "advantage": 100 },
+					"DashGrab": { "startup": 14, "advantage": 100 },
+					"PivotGrab": { "startup": 15, "advantage": 100 }
+				},
+				"Incineroar": {
+					"Jab": {
+						"startup": 5,
+						"landinglag": 0,
+						"advantage": -28
+					},
+					"ForwardTilt": {
+						"startup": 12,
+						"landinglag": 0,
+						"advantage": -12
+					},
+					"UpTilt": {
+						"startup": 6,
+						"landinglag": 0,
+						"advantage": -19
+					},
+					"DownTilt": {
+						"startup": 9,
+						"landinglag": 0,
+						"advantage": -11
+					},
+					"DashAttack": {
+						"startup": 8,
+						"landinglag": 0,
+						"advantage": -21
+					},
+					"ForwardSmash": {
+						"startup": 16,
+						"landinglag": 0,
+						"advantage": -22
+					},
+					"UpSmash": {
+						"startup": 13,
+						"landinglag": 0,
+						"advantage": -23
+					},
+					"DownSmash": {
+						"startup": 18,
+						"landinglag": 0,
+						"advantage": -28
+					},
+					"NeutralAir": {
+						"startup": 5,
+						"landinglag": 11,
+						"advantage": -6
+					},
+					"ForwardAir": {
+						"startup": 8,
+						"landinglag": 14,
+						"advantage": -9
+					},
+					"BackAir": {
+						"startup": 7,
+						"landinglag": 11,
+						"advantage": -6
+					},
+					"UpAir": {
+						"startup": 7,
+						"landinglag": 8,
+						"advantage": -4
+					},
+					"DownAir": {
+						"startup": 16,
+						"landinglag": 16,
+						"advantage": -11
+					},
+					"NeutralB": {
+						"startup": 5,
+						"landinglag": 0,
+						"advantage": -65
+					},
+					"SideB": {
+						"startup": 18,
+						"landinglag": 0,
+						"advantage": 0
+					},
+					"UpB": {
+						"startup": 11,
+						"landinglag": 61,
+						"advantage": -51
+					},
+					"UpBAir": {
+						"startup": 11,
+						"landinglag": 61,
+						"advantage": -51
+					},
+					"DownB": {
+						"startup": 3,
+						"landinglag": 0,
+						"advantage": 100
+					},
+					"DownBAir": {
+						"startup": 3,
+						"landinglag": 0,
+						"advantage": 100
+					},
+					"Grab": {
+						"startup": 8,
+						"advantage": 100
+					},
+					"DashGrab": {
+						"startup": 12,
+						"advantage": 100
+					},
+					"PivotGrab": {
+						"startup": 13,
+						"advantage": 100
+					}
+				},
+
+
+			};
+			u1 = document.getElementById("set").char1.value;
+			m1 = document.getElementById("set").move1.value;
+			u2 = document.getElementById("set").char2.value;
+			p1 = data[u1][m1].advantage;
+			p2 = data[u2];
+			arrU = Object.keys(data[u2])
+			out = "<ul>";
+			for (var i = 0; i < arrU.length; i++) {
+				tempMove = p2[arrU[i]].startup + 11;
+				if (arrU[i].includes("Air") && !arrU[i].includes("UpB")) {
+					tempMove -= 8;
+				}
+				if (arrU[i].includes("Up") || arrU[i].includes("Grab") && !arrU[i].includes("Tilt") && !arrU[i].includes("Air")) {
+					tempMove -= 11;
+				}
+				tempMove = 0 - tempMove;
+				if (tempMove > p1 && arrU[i] != "UpBAir") {
+					out += "<li>"
+					out += arrU[i];
+					out += "</li>";
+				}
+			}
+			if (out == "<ul>") {
+				out += "Safe On Shield";
+			}
+			document.getElementById("output").innerHTML = out + "</ul>";
+		}
+	</script>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header id="header">
-        <h1><strong><a href="index.html">Drexel Smash Ultimate</a></strong></h1>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Discord Link</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="improve.html">Get Good</a></li>
-            </ul>
-        </nav>
-    </header>
+	<!-- Header -->
+	<header id="header">
+		<h1><strong><a href="index.html">Drexel Smash Ultimate</a></strong></h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="contact.html">Discord Link</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="improve.html">Get Good</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <a href="#menu" class="navPanelToggle" style="height:50px"><span class="fa fa-bars"></span></a>
-    <!-- Main -->
-    <section id="main" class="wrapper">
-        <div class="container" id="filler" style="height:100px; width:100%">
+	<a href="#menu" class="navPanelToggle" style="height:50px"><span class="fa fa-bars"></span></a>
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="container" id="filler" style="height:100px; width:100%">
 
-        </div>
-        <div class="container">
-            <form id="set" action="/calc.html">
-                <div class="select-wrapper" style="width:45%; float:left">
-                    Attacking
-                    <select name="char1" id="char1">
-                        <option value="">- Character -</option>
-                        <option value="DK">Donkey Kong</option>
-                        <option value="Greninja">Greninja</option>
-                        <option value="Lucas">Lucas</option>
-                        <option value="MetaKnight">Meta Knight</option>
-                        <option value="Plant">Piranah Plant</option>
-                    </select>
-                    <select name="move1" id="move1">
-                        <option value="">- Move -</option>
-                        <option value="Jab"> Jab</option>
-                        <option value="ForwardTilt"> ForwardTilt</option>
-                        <option value="UpTilt"> UpTilt</option>
-                        <option value="DownTilt"> DownTilt</option>
-                        <option value="DashAttack"> DashAttack</option>
-                        <option value="ForwardSmash"> ForwardSmash</option>
-                        <option value="UpSmash"> UpSmash</option>
-                        <option value="DownSmash"> DownSmash</option>
-                        <option value="NeutralAir"> NeutralAir</option>
-                        <option value="ForwardAir"> ForwardAir</option>
-                        <option value="BackAir"> BackAir</option>
-                        <option value="UpAir"> UpAir</option>
-                        <option value="DownAir"> DownAir</option>
-                        <option value="ZAir"> ZAir</option>
-                        <option value="NeutralB"> NeutralB</option>
-                        <option value="SideB"> SideB</option>
-                        <option value="UpB"> UpB</option>
-                        <option value="UpBAir"> UpBAir</option>
-                        <option value="DownB"> DownB</option>
-                        <option value="DownBAir"> DownBAir</option>
-                    </select>
-                </div>
-                <div class="select-wrapper" style="width:45%; float:right; margin-bottom:60px">
-                    Shielding
-                    <select name="char2" id="char2">
-                        <option value="">- Character -</option>
-                        <option value="DK">Donkey Kong</option>
-                        <option value="Greninja">Greninja</option>
-                        <option value="Lucas">Lucas</option>
-                        <option value="MetaKnight">Meta Knight</option>
-                        <option value="Plant">Piranah Plant</option>
-                    </select>
+		</div>
+		<div class="container">
+			<form id="set" action="/calc.html">
+				<div class="select-wrapper" style="width:45%; float:left">
+					Attacking
+					<select name="char1" id="char1">
+						<option value="">- Character -</option>
+						<option value="DK">Donkey Kong</option>
+						<option value="Greninja">Greninja</option>
+						<option value="Lucas">Lucas</option>
+						<option value="MetaKnight">Meta Knight</option>
+						<option value="Plant">Piranah Plant</option>
+					</select>
+					<select name="move1" id="move1">
+						<option value="">- Move -</option>
+						<option value="Jab"> Jab</option>
+						<option value="ForwardTilt"> ForwardTilt</option>
+						<option value="UpTilt"> UpTilt</option>
+						<option value="DownTilt"> DownTilt</option>
+						<option value="DashAttack"> DashAttack</option>
+						<option value="ForwardSmash"> ForwardSmash</option>
+						<option value="UpSmash"> UpSmash</option>
+						<option value="DownSmash"> DownSmash</option>
+						<option value="NeutralAir"> NeutralAir</option>
+						<option value="ForwardAir"> ForwardAir</option>
+						<option value="BackAir"> BackAir</option>
+						<option value="UpAir"> UpAir</option>
+						<option value="DownAir"> DownAir</option>
+						<option value="ZAir"> ZAir</option>
+						<option value="NeutralB"> NeutralB</option>
+						<option value="SideB"> SideB</option>
+						<option value="UpB"> UpB</option>
+						<option value="UpBAir"> UpBAir</option>
+						<option value="DownB"> DownB</option>
+						<option value="DownBAir"> DownBAir</option>
+					</select>
+				</div>
+				<div class="select-wrapper" style="width:45%; float:right; margin-bottom:60px">
+					Shielding
+					<select name="char2" id="char2">
+						<option value="">- Character -</option>
+						<option value="DK">Donkey Kong</option>
+						<option value="Greninja">Greninja</option>
+						<option value="Incineroar">Incineroar</option>
+						<option value="Lucas">Lucas</option>
+						<option value="MetaKnight">Meta Knight</option>
+						<option value="Plant">Piranah Plant</option>
+					</select>
 
-                </div>
-                <div class="12u$">
-                    <ul class="actions" style="float:center; width:100%">
-                        <li><input type="button" value="submit" style="float:center; width:100%" class="special"
-                                onclick="getMove()"></li>
-                    </ul>
-                </div>
+				</div>
+				<div class="12u$">
+					<ul class="actions" style="float:center; width:100%">
+						<li><input type="button" value="submit" style="float:center; width:100%" class="special"
+								onclick="getMove()"></li>
+					</ul>
+				</div>
 
-            </form>
-        </div>
-        <div class="container" id="output">
+			</form>
+		</div>
+		<div class="container" id="output">
 
-        </div>
+		</div>
 
-    </section>
+	</section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <ul class="copyright">
-                <li>&copy; Untitled</li>
-                <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-                <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-            </ul>
-        </div>
-    </footer>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<ul class="copyright">
+				<li>&copy; Untitled</li>
+				<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+				<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+			</ul>
+		</div>
+	</footer>
 
-    <!-- Scripts -->
-    <script src="jquery.min.js"></script>
-    <script src="skel.min.js"></script>
-    <script src="util.js"></script>
-    <script src="main.js"></script>
+	<!-- Scripts -->
+	<script src="jquery.min.js"></script>
+	<script src="skel.min.js"></script>
+	<script src="util.js"></script>
+	<script src="main.js"></script>
 
 </body>
 
