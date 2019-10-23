@@ -141,11 +141,6 @@
 			p1 = data[u1][m1].advantage;
 			p2 = data[u2];
 			arrU = Object.keys(data[u2])
-
-			//console.log(m1);
-			//console.log(u1);
-			//console.log(p1);
-			//console.log(p2);
 			out = "<ul>";
 
 			for (var i = 0; i < arrU.length; i++) {
@@ -163,6 +158,9 @@
 					out += arrU[i];
 					out += "</li>";
 				}
+			}
+			if(out=="<ul>"){
+				out+="Safe On Shield";
 			}
 			document.getElementById("output").innerHTML = out + "</ul>";
 
