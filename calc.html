@@ -12,10 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="main.css" />
 	<script>
-
 		function getMove() {
-
-
 			data = {
 				"DK": { 
 					"Jab": { "startup": 5, "landinglag": 0, "advantage": -24 }, 
@@ -133,8 +130,6 @@
 					"DownAir": { "startup": 19, "landinglag": 0, "advantage": 0 } 
 				}
 			};
-
-
 			u1 = document.getElementById("set").char1.value;
 			m1 = document.getElementById("set").move1.value;
 			u2 = document.getElementById("set").char2.value;
@@ -142,10 +137,8 @@
 			p2 = data[u2];
 			arrU = Object.keys(data[u2])
 			out = "<ul>";
-
 			for (var i = 0; i < arrU.length; i++) {
 				tempMove = p2[arrU[i]].startup + 11;
-
 				if (arrU[i].includes("Air") && !arrU[i].includes("UpB")) {
 					tempMove -= 8;
 				}
@@ -163,7 +156,6 @@
 				out+="Safe On Shield";
 			}
 			document.getElementById("output").innerHTML = out + "</ul>";
-
 		}
 	</script>
 </head>
@@ -182,7 +174,7 @@
 		</nav>
 	</header>
 
-	<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+	<a href="#menu" class="navPanelToggle" style="height:50px"><span class="fa fa-bars"></span></a>
 
 	<!-- Main -->
 	<section id="main" class="wrapper">
@@ -238,9 +230,8 @@
 
 				</div>
 				<div class="12u$">
-					<ul class="actions">
-						<li><input type="button" value="submit" style="float:left" class="special"
-								onclick="getMove()" /></li>
+					<ul class="actions" style="float:center; width:100%">
+						<li><input type="button" value="submit" style="float:center; width:100%" class="special" onclick="getMove()"></li>
 					</ul>
 				</div>
 
@@ -266,10 +257,10 @@
 	</footer>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="skel.min.js"></script>
+	<script src="util.js"></script>
+	<script src="main.js"></script>
 
 </body>
 
