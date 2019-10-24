@@ -220,6 +220,38 @@
             u1 = document.getElementById("set").char1.value;
             m1 = document.getElementById("set").move1.value;
             u2 = document.getElementById("set").char2.value;
+            message = "";
+            if (u1 == "" || m1 == "" || u2 == "") {
+                message = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                message += "Please select";
+                if (u1 == "" && m1 == "" && u2 == "") {
+                    message += " an attacking character, a move for the attacking character to use, and a shielding character";
+                }//if all 3 blank
+                if (u1 == "" && m1 == "" && u2 != "") {
+                    message += " an attacking character, and a move for the attacking character to use";
+                }//if u1 and m1 blank
+                if (u1 == "" && m1 != "" && u2 == "") {
+                    message += " an attacking character, and a move for the attacking character to use";
+                }//if u1 and u2 blank
+                if (u1 == "" && m1 != "" && u2 != "") {
+                    message += " an attacking character";
+                }//if u1 blank
+                if (u1 != "" && m1 == "" && u2 == "") {
+                    message += " a move for the attacking character to use, and a shielding character";
+                }//if m1 and u2 blank
+                if (u1 != "" && m1 == "" && u2 != "") {
+                    message += " a move for the attacking character to use";
+                }//if m1 and u2 blank
+                if (u1 != "" && m1 != "" && u2 == "") {
+                    message += " a shielding character";
+                }
+            }
+            if (message != "") {
+                document.getElementById("output").innerHTML = message + "</ul></div>";
+            }
+
+
+            document.getElementById("output").innerHTML = message + "</ul></div>";
             try {
                 p1 = data[u1][m1].advantage;
                 p2 = data[u2];
