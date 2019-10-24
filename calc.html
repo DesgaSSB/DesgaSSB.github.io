@@ -214,6 +214,10 @@
                     "SideB": { "startup": 17, "landinglag": 0, "advantage": 0 },
                     "UpB": { "startup": 0, "landinglag": 30, "advantage": 0 },
                     "DownB": { "startup": 0, "landinglag": 0, "advantage": 0 },
+                    "Grab": { "startup": 6, "advantage": 100 },
+                    "DashGrab": { "startup": 9, "advantage": 100 },
+                    "PivotGrab": { "startup": 10, "advantage": 100 },
+
                 },
                 "Joker": {
                     "Jab": {
@@ -286,9 +290,183 @@
                     "DashGrab": { "startup": 8, "advantage": 100 },
                     "PivotGrab": { "startup": 9, "advantage": 100 },
 
-                }
+                },
+                "Dedede": {
+                    "Jab": {
+                        "Jab1": { "startup": 10, "landinglag": 0, "advantage": -18 },
+                        "Jab2": { "startup": 11, "landinglag": 0, "advantage": -13 },
+                        "RapidJab": { "startup": 5, "landinglag": 0, "advantage": -41 },
+                    },
+
+                    "ForwardTilt": { "startup": 12, "landinglag": 0, "advantage": -21 },
+                    "UpTilt": { "startup": 7, "landinglag": 0, "advantage": -21 },
+                    "DownTilt": { "startup": 6, "landinglag": 0, "advantage": -21 },
+                    "DashAttack": { "startup": 26, "landinglag": 0, "advantage": -26 },
+                    "ForwardSmash": { "startup": 40, "landinglag": 0, "advantage": -18 },
+                    "UpSmash": { "startup": 17, "landinglag": 0, "advantage": -39 },
+                    "DownSmash": { "startup": 12, "landinglag": 0, "advantage": -31 - 23 },
+                    "NeutralAir": { "startup": 7, "landinglag": 9, "advantage": -4 - 6 },
+                    "ForwardAir": { "startup": 13, "landinglag": 18, "advantage": -13 },
+                    "BackAir": { "startup": 17, "landinglag": 13, "advantage": -8 },
+                    "UpAir": { "startup": 10, "landinglag": 13, "advantage": -10 },
+                    "DownAir": { "startup": 22, "landinglag": 18, "advantage": -13 },
+                    "NeutralBInhale": { "startup": 17, "landinglag": 0, "advantage": 0 },
+                    "InhaleSpit": { "startup": 6, "landinglag": 0, "advantage": 0 },
+                    "SideB": {
+                        "SideBHammer": { "startup": 29, "landinglag": 0, "advantage": -21 },
+                        "SideBGordo": { "startup": 29, "landinglag": 0, "advantage": -11 },
+                        "SideBBoth": { "startup": 29, "landinglag": 0, "advantage": -17 },
+                    },
+                    "UpB": { "startup": 69, "landinglag": 60, "advantage": -46 },
+                    "DownB": {
+                        "DownBNoCharge": { "startup": 10, "landinglag": 0, "advantage": -39 },
+                        "DownBFullCharge": { "startup": 9, "landinglag": 0, "advantage": -26 },
+                    },
+                },
+                "Ike": {
+                    "Jab": {
+                        "Jab1": { "startup": 4, "landinglag": 0, "advantage": -15 },
+                        "Jab2": { "startup": 3, "landinglag": 0, "advantage": -20 },
+                        "Jab3": { "startup": 5, "landinglag": 0, "advantage": -29 },
+                    },
+                    "ForwardTilt": { "startup": 12, "landinglag": 0, "advantage": -17 },
+                    "UpTilt": { "startup": 11, "landinglag": 0, "advantage": -17 },
+                    "DownTilt": { "startup": 7, "landinglag": 0, "advantage": -13 },
+                    "DashAttack": { "startup": 15, "landinglag": 0, "advantage": -17 },
+                    "ForwardSmash": { "startup": 31, "landinglag": 0, "advantage": -36 },
+                    "UpSmash": { "startup": 25, "landinglag": 0, "advantage": -34 },
+                    "NeutralAir": { "startup": 10, "landinglag": 8, "advantage": -5 },
+                    "ForwardAir": { "startup": 11, "landinglag": 14, "advantage": -9 },
+                    "BackAir": { "startup": 7, "landinglag": 11, "advantage": -6 },
+                    "UpAir": { "startup": 13, "landinglag": 9, "advantage": -5 },
+                    "DownAir": { "startup": 16, "landinglag": 14, "advantage": -9 },
+                    "UpB": { "startup": 15, "landinglag": 36, "advantage": -29 },
+                    "DownB": { "startup": 9, "landinglag": 0, "advantage": 0 },
+                    "DownSmash": {
+                        "DownSmashFront": { "startup": 13, "landinglag": 0, "advantage": -46 },
+                        "DownSmashBack": { "startup": 32, "landinglag": 0, "advantage": -25 },
+                    },
+                    "NeutralB": {
+                        "NeutralB": { "startup": 30, "landinglag": 0, "advantage": -38 },
+                        "NeutralBFull": { "startup": 239, "landinglag": 0, "advantage": 1000 },
+
+                    },
+                    "SideB": {
+                        "SideB": { "startup": 16, "landinglag": 30, "advantage": -28 },
+                        "SideBFull": { "startup": 16, "landinglag": 30, "advantage": -22 },
+                    },
+                    "Grab": { "startup": 7, "advantage": 100 },
+                    "DashGrab": { "startup": 10, "advantage": 100 },
+                    "PivotGrab": { "startup": 11, "advantage": 100 },
+
+                },
+
+                "Robin": {
+                    "Jab": {
+                        "Jab1": { "startup": 4, "landinglag": 0, "advantage": -24 },
+                        "Jab2": { "startup": 5, "landinglag": 0, "advantage": -26 },
+                        "Jab3": { "startup": 6, "landinglag": 0, "advantage": -23 },
+                        "RapidJab": { "startup": 468..., "landinglag": 0, "advantage": 0 },
+                        "RapidJabFinisher": { "startup": 5, "landinglag": 0, "advantage": -39 },
+                    },
+                    "ForwardTilt": { "startup": 9, "landinglag": 0, "advantage": -15 },
+                    "UpTilt": { "startup": 6, "landinglag": 0, "advantage": -15 },
+                    "DownTilt": { "startup": 7, "landinglag": 0, "advantage": -8 },
+                    "DashAttack": { "startup": 8, "landinglag": 0, "advantage": -23 },
+                    "ForwardSmash": {
+                        "ForwardSmash": { "startup": 16, "landinglag": 0, "advantage": -30 },
+                        "ForwardSmashBronze": { "startup": 16, "landinglag": 0, "advantage": -34 },
+                    },
+                    "UpSmash": {
+                        "UpSmash": { "startup": 12, "landinglag": 0, "advantage": -30 },
+                        "UpSmashBronze": { "startup": 12, "landinglag": 0, "advantage": -33 },
+                    },
+                    "DownSmash": {
+                        "DownSmash": { "startup": 16, "landinglag": 0, "advantage": -28 },
+                        "DownSmashBronze": { "startup": 16, "landinglag": 0, "advantage": -34 },
+                    },
+                    "NeutralAir": {
+                        "NeutralAir": { "startup": 9, "landinglag": 11, "advantage": -6 },
+                        "NeutralAirBronze": { "startup": 9, "landinglag": 11, "advantage": -8 },
+                    },
+                    "ForwardAir": {
+                        "ForwardAir": { "startup": 12, "landinglag": 11, "advantage": -6 },
+                        "ForwardAirBronze": { "startup": 12, "landinglag": 11, "advantage": -8 },
+                    },
+                    "BackAir": {
+                        "BackAirEarly": { "startup": 9, "landinglag": 11, "advantage": -6 - 8 - 7 },
+                        "BackAirLate": { "startup": 9, "landinglag": 11, "advantage": -6 - 8 - 7 },
+                        "BackAirBronzeEarly": { "startup": 9, "landinglag": 11, "advantage": -6 - 8 - 7 },
+                        "BackAirBronzeLate": { "startup": 9, "landinglag": 11, "advantage": -6 - 8 - 7 },
+
+                    },
+                    "UpAir": {
+                        "UpAirEarly": { "startup": 10, "landinglag": 11, "advantage": -6 },
+                        "UpAirLate": { "startup": 10, "landinglag": 11, "advantage": -8 },
+                        "UpAirBronzeEarly": { "startup": 10, "landinglag": 11, "advantage": -7 },
+                        "UpAirBronzeLate": { "startup": 10, "landinglag": 11, "advantage": -7 },
 
 
+                    },
+                    "DownAir": {
+                        "DownAirEarly": { "startup": 13, "landinglag": 16, "advantage": -7 },
+                        "DownAirLate": { "startup": 13, "landinglag": 16, "advantage": -7 },
+                        "DownAirBronzeEarly": { "startup": 13, "landinglag": 16, "advantage": -8 },
+                        "DownAirBronzeLate": { "startup": 13, "landinglag": 16, "advantage": -8 },
+                    },
+                    "NeutralB": {
+                        "NeutralBThunderElthunderArcthunder": { "startup": 888, "landinglag": 0, "advantage": -12 - 13 },
+                        "NeutralBThunderElthunderArcthunder": { "startup": 888, "landinglag": 0, "advantage": -12 - 13 },
+                        "NeutralBThunderElthunderArcthunder": { "startup": 888, "landinglag": 0, "advantage": -12 - 13 },
+                        "Thoron": { "startup": 23273135394347, "landinglag": 0, "advantage": -20 },
+                    },
+                    "SideB": { "startup": 17, "landinglag": 0, "advantage": +13 },
+                    "UpB": { "startup": 8, "landinglag": 25, "advantage": -100 },
+                    "DownB": { "startup": 15, "landinglag": 0, "advantage": 100 },
+                    "Grab": { "startup": 7, "advantage": 100 },
+                    "DashGrab": { "startup": 10, "advantage": 100 },
+                    "PivotGrab": { "startup": 11, "advantage": 100 },
+
+                },
+                "ZSS": {
+                    "Jab": {
+                        "Jab1": { "startup": 1, "landinglag": 0, "advantage": -19 },
+                        "Jab2": { "startup": 2, "landinglag": 0, "advantage": -20 },
+                        "Jab3": { "startup": 3, "landinglag": 0, "advantage": -27 },
+                    },
+                    "ForwardTilt": {
+                        "ForwardTilt": { "startup": 6, "landinglag": 0, "advantage": -15 },
+                        "ForwardTiltAngled": { "startup": 6, "landinglag": 0, "advantage": -14 },
+                    },
+
+                    "UpTilt": { "startup": 39, "landinglag": 0, "advantage": -29 },
+                    "DownTilt": { "startup": 8, "landinglag": 0, "advantage": -13 },
+                    "DashAttack": { "startup": 7, "landinglag": 0, "advantage": -36 },
+                    "ForwardSmash": { "startup": 13, "landinglag": 0, "advantage": -30 },
+                    "UpSmash": { "startup": 10, "landinglag": 0, "advantage": -17 },
+                    "NeutralAir": { "startup": 10, "landinglag": 6, "advantage": -2 },
+                    "ForwardAir": { "startup": 6, "landinglag": 10, "advantage": -7 },
+                    "BackAir": {
+                        "BackAirClose": { "startup": 8, "landinglag": 10, "advantage": -6 },
+                        "BackAirFar": { "startup": 8, "landinglag": 10, "advantage": -5 },
+                    },
+                    "UpAir": { "startup": 6, "landinglag": 5, "advantage": -2 },
+                    "DownAir": { "startup": 14, "landinglag": 24, "advantage": -17 },
+                    "ZAir": { "startup": 9, "landinglag": 8, "advantage": -2 },
+                    "NeutralB": {
+                        "NeutralBUncharged": { "startup": 21, "landinglag": 0, "advantage": -18 },
+                        "NeutralBFullyCharged": { "startup": 43, "landinglag": 0, "advantage": -20 },
+                    },
+                    "SideB": { "startup": 22, "landinglag": 0, "advantage": -15 },
+                    "UpB": { "startup": 4, "landinglag": 30, "advantage": 0 },
+                    "DownB": {
+                        "DownB": { "startup": 0, "landinglag": 0, "advantage": -100 },
+                        "DownBKick": { "startup": 9, "landinglag": 35, "advantage": -36 },
+                    },
+                    "Grab": { "startup": 15, "advantage": 100 },
+                    "DashGrab": { "startup": 17, "advantage": 100 },
+                    "PivotGrab": { "startup": 18, "advantage": 100 },
+                },
 
 
 
@@ -408,17 +586,20 @@
                         <option value="DK">Donkey Kong</option>
                         <option value="Duck Hunt">Duck Hunt</option>
                         <option value="Greninja">Greninja</option>
+                        <option value="Ike">Ike</option>
                         <option value="Incineroar">Incineroar</option>
                         <option value="Joker">Joker</option>
+                        <option value="Dedede">King Dedede</option>
                         <option value="Lucas">Lucas</option>
                         <option value="MetaKnight">Meta Knight</option>
                         <option value="Plant">Piranah Plant</option>
                         <option value="Ridley">Ridley</option>
+                        <option value="Robin">Robin</option>
+                        <option value="ZSS">Zero Suit Samus</option>
                     </select>
                     <select name="move1" id="move1">
                         <option value="">- Move -</option>
                         <option value="Jab"> Jab</option>
-                        <option value="Jab"> Rapid Jab</option>
                         <option value="ForwardTilt"> Forward Tilt</option>
                         <option value="UpTilt"> Up Tilt</option>
                         <option value="DownTilt"> Down Tilt</option>
@@ -435,9 +616,8 @@
                         <option value="NeutralB"> Neutral B</option>
                         <option value="SideB"> Side B</option>
                         <option value="UpB"> Up B</option>
-                        <option value="UpBAir"> Up B Air</option>
                         <option value="DownB"> Down B</option>
-                        <option value="DownBAir"> Down B Air</option>
+
                     </select>
                 </div>
                 <div class="select-wrapper" style="width:45%; float:right; margin-bottom:60px">
@@ -447,12 +627,16 @@
                         <option value="DK">Donkey Kong</option>
                         <option value="Duck Hunt">Duck Hunt</option>
                         <option value="Greninja">Greninja</option>
+                        <option value="Ike">Ike</option>
                         <option value="Incineroar">Incineroar</option>
                         <option value="Joker">Joker</option>
+                        <option value="Dedede">King Dedede</option>
                         <option value="Lucas">Lucas</option>
                         <option value="MetaKnight">Meta Knight</option>
                         <option value="Plant">Piranah Plant</option>
                         <option value="Ridley">Ridley</option>
+                        <option value="Robin">Robin</option>
+                        <option value="ZSS">Zero Suit Samus</option>
                     </select>
 
                 </div>
