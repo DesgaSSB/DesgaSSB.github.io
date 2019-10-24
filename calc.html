@@ -530,7 +530,11 @@
 
 
             };//data
+	    u1 = document.getElementById("set").char1.value;
+            m1 = document.getElementById("set").move1.value;
+            u2 = document.getElementById("set").char2.value;
             try {
+		
                 p1 = data[u1][m1].advantage;
                 p2 = data[u2];
                 arrU = Object.keys(data[u2]);
