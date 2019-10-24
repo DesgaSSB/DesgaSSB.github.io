@@ -249,54 +249,53 @@
             if (message != "") {
                 document.getElementById("output").innerHTML = message + "</ul></div>";
             }
-
-
-            document.getElementById("output").innerHTML = message + "</ul></div>";
-            try {
-                p1 = data[u1][m1].advantage;
-                p2 = data[u2];
-                arrU = Object.keys(data[u2]);
-                out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
-                for (var i = 0; i < arrU.length; i++) {
-                    tempMove = p2[arrU[i]].startup;
-                    if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
-                        tempMove += 3;
-                    }//if aerial
-                    else {
-                        if (arrU[i] == ("UpSmash") || arrU[i] == ("Grab") || arrU[i] == ("UpB")) {
-                            tempMove += 0;
-                        } //if no oos lag
+            else {
+                try {
+                    p1 = data[u1][m1].advantage;
+                    p2 = data[u2];
+                    arrU = Object.keys(data[u2]);
+                    out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                    for (var i = 0; i < arrU.length; i++) {
+                        tempMove = p2[arrU[i]].startup;
+                        if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
+                            tempMove += 3;
+                        }//if aerial
                         else {
-                            if (arrU[i].includes("Dash") || arrU[i].includes("Turnaround")) {
-                                tempMove += 12;
-                            }//if requires initial dash
+                            if (arrU[i] == ("UpSmash") || arrU[i] == ("Grab") || arrU[i] == ("UpB")) {
+                                tempMove += 0;
+                            } //if no oos lag
                             else {
-                                if (arrU[i] == ("Pivot Grab")) {
-                                    tempMove += 13;
-                                }//if pivot grab
+                                if (arrU[i].includes("Dash") || arrU[i].includes("Turnaround")) {
+                                    tempMove += 12;
+                                }//if requires initial dash
                                 else {
-                                    tempMove += 11;
-                                }//if normal move
-                            }//if does not require initial dash (fuck you dylan I know pivot grab requires initial dash)
-                        }//if has oos lag
-                    }//if not aerial
-                    tempMove = 0 - tempMove;
-                    if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
-                        out += "<li>";
-                        out += arrU[i];
-                        out += "</li>";
-                    }//if can punish
-                }//for
-                if (out == "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>") {
-                    out += "Safe On Shield";
-                } //if safe on shield
-                document.getElementById("output").innerHTML = out + "</ul></div>";
-            }//try
-            catch (err) {
-                out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
-                out += "The attacking character cannot use the move that is selected";
-                document.getElementById("output").innerHTML = out + "</ul></div>";
-            }//catch
+                                    if (arrU[i] == ("Pivot Grab")) {
+                                        tempMove += 13;
+                                    }//if pivot grab
+                                    else {
+                                        tempMove += 11;
+                                    }//if normal move
+                                }//if does not require initial dash (fuck you dylan I know pivot grab requires initial dash)
+                            }//if has oos lag
+                        }//if not aerial
+                        tempMove = 0 - tempMove;
+                        if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
+                            out += "<li>";
+                            out += arrU[i];
+                            out += "</li>";
+                        }//if can punish
+                    }//for
+                    if (out == "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>") {
+                        out += "Safe On Shield";
+                    } //if safe on shield
+                    document.getElementById("output").innerHTML = out + "</ul></div>";
+                }//try
+                catch (err) {
+                    out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                    out += "The attacking character cannot use the move that is selected";
+                    document.getElementById("output").innerHTML = out + "</ul></div>";
+                }//catch
+            }
 
         }//function
     </script>
