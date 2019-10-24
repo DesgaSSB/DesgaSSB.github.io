@@ -530,11 +530,18 @@
 
 
             };//data
-	    u1 = document.getElementById("set").char1.value;
+            u1 = document.getElementById("set").char1.value;
             m1 = document.getElementById("set").move1.value;
             u2 = document.getElementById("set").char2.value;
             try {
-		
+                try {
+                    test = data[u1][m1];
+                }
+                catch{
+                    out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                    out += "The attacking character cannot use the move that is selected";
+                    document.getElementById("output").innerHTML = out + "</ul></div>";
+                }
                 p1 = data[u1][m1].advantage;
                 p2 = data[u2];
                 arrU = Object.keys(data[u2]);
@@ -575,9 +582,17 @@
                 document.getElementById("output").innerHTML = out + "</ul></div>";
             }//try
             catch (err) {
+                try {
+                    test = data[u1][m1];
+                }
+                catch{
+                    out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                    out += "The attacking character cannot use the move that is selected";
+                    document.getElementById("output").innerHTML = out + "</ul></div>";
+                }
                 arrM = Object.keys(data[u1][m1]);
                 for (var j = 0; j < arrM.length; j++) {
-                    p1 = data[u1][m1][j].advantage;
+                    p1 = data[u1][m1][arrM[j]].advantage;
                     p2 = data[u2];
                     arrU = Object.keys(data[u2]);
                     out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
