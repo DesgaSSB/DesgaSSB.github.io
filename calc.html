@@ -224,7 +224,9 @@
                 p1 = data[u1][m1].advantage;
             }//try
             catch (err) {
-                document.getElementById("output").innerHTML = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>The attacking character cannot use the move that is selected</ul></div>";
+                out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                out += "The attacking character cannot use the move that is selected";
+                document.getElementById("output").innerHTML = out + "</ul></div>";
             }//catch
             p2 = data[u2];
             arrU = Object.keys(data[u2]);
@@ -294,7 +296,7 @@
                 <div class="select-wrapper" style="width:45%; float:left">
                     Attacking
                     <select name="char1" id="char1">
-                        <option value="">- Character1 -</option>
+                        <option value="">- Character -</option>
                         <option value="DK">Donkey Kong</option>
                         <option value="Greninja">Greninja</option>
                         <option value="Icies">Ice Climbers</option>
@@ -332,7 +334,7 @@
                 <div class="select-wrapper" style="width:45%; float:right; margin-bottom:60px">
                     Shielding
                     <select name="char2" id="char2">
-                        <option value="">- Character2 -</option>
+                        <option value="">- Character -</option>
                         <option value="DK">Donkey Kong</option>
                         <option value="Greninja">Greninja</option>
                         <option value="Icies">Ice Climbers</option>
