@@ -12,33 +12,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.css" />
-    <script>
-        function getMove() {
+    <script type="text/javascript">
+
+        function getData(name) {
             data = {
-		    "Tester": {
+                "Tester": {
                     "Jab": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "RapidJab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "ForwardTilt":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "UpTilt":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DownTilt":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DashAttack":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "ForwardSmash":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "UpSmash":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DownSmash":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "NeutralAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "ForwardAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "BackAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "UpAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DownAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "NeutralB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "SideB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "UpB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "UpBAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DownB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DownBAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "Grab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "DashGrab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
-                    "PivotGrab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "RapidJab": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "ForwardTilt": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpTilt": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownTilt": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DashAttack": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "ForwardSmash": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpSmash": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownSmash": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "NeutralAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "ForwardAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "BackAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "NeutralB": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "SideB": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpB": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpBAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownB": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownBAir": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "Grab": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DashGrab": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "PivotGrab": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
                 },
                 "DK": {
                     "Jab": { "startup": 5, "landinglag": 0, "advantage": -24 },
@@ -274,16 +275,16 @@
                         "UpSmashArsene": { "startup": 10, "landinglag": 0, "advantage": -30 },
                     },
                     "DownSmash": {
-                        "DownSmash": { "startup": 12, "landinglag": 0, "advantage": -20 },
-                        "DownSmashArsene": { "startup": 12, "landinglag": 0, "advantage": -18 },
+                        "DownSmash": { "startup": 1216, "landinglag": 0, "advantage": -20 },
+                        "DownSmashArsene": { "startup": 1216, "landinglag": 0, "advantage": -18 },
                     },
                     "NeutralAir": {
                         "NeutralAir": { "startup": 12, "landinglag": 8, "advantage": -5 },
                         "NeutralAirArsene": { "startup": 12, "landinglag": 8, "advantage": -5 },
                     },
                     "ForwardAir": {
-                        "ForwardAir": { "startup": 7, "landinglag": 12, "advantage": -10 },
-                        "ForwardAirArsene": { "startup": 7, "landinglag": 12, "advantage": -9 },
+                        "ForwardAir": { "startup": 712, "landinglag": 12, "advantage": -10 },
+                        "ForwardAirArsene": { "startup": 712, "landinglag": 12, "advantage": -9 },
                     },
                     "BackAir": {
                         "BackAir": { "startup": 7, "landinglag": 9, "advantage": -5 },
@@ -549,222 +550,289 @@
                     "DashGrab": { "startup": 9, "advantage": 100 },
                     "PivotGrab": { "startup": 10, "advantage": 100 },
                 },
-
-
-
-
-
-            };//data
-            u1 = document.getElementById("set").char1.value;
-            m1 = document.getElementById("set").move1.value;
-            u2 = document.getElementById("set").char2.value;
-            try {
-                p1 = data[u1][m1].advantage;
-                console.log(p1);
-                console.log('this is p1');
-                p2 = data[u2];
-                arrU = Object.keys(data[u2]);
-                out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
-                for (var i = 0; i < arrU.length; i++) {
-
-                    tempMove = p2[arrU[i]].startup;
-                    console.log(tempMove);
-                    if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
-                        tempMove += 3;
-                    }//if aerial
-                    else {
-                        if (arrU[i] == ("UpSmash") || arrU[i] == ("Grab") || arrU[i] == ("UpB")) {
-                            tempMove += 0;
-                        } //if no oos lag
-                        else {
-                            if (arrU[i].includes("Dash") || arrU[i].includes("Turnaround")) {
-                                tempMove += 12;
-                            }//if requires initial dash
-                            else {
-                                if (arrU[i] == ("Pivot Grab")) {
-                                    tempMove += 13;
-                                }//if pivot grab
-                                else {
-                                    tempMove += 11;
-                                }//if normal move
-                            }//if does not require initial dash (fuck you dylan I know pivot grab requires initial dash)
-                        }//if has oos lag
-                    }//if not aerial
-                    tempMove = 0 - tempMove;
-                    if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
-                        out += "<li>";
-                        out += arrU[i];
-                        out += "</li>";
-                    }//if can punish
-                }//for
-                if (out == "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>") {
-                    out += "Safe On Shield";
-                } //if safe on shield
-                document.getElementById("output").innerHTML = out + "</ul></div>";
             }
-            catch (err) {
-                try {
-                    arrM = Object.keys(data[u1][m1]);
-                    console.log("found move outer JSON in data");
-                    for (var j = 0; j < arrM.length; j++) {
-                        console.log(j);
-                        p1 = data[u1][m1][arrM[j]].advantage;
-                        console.log("found move inner JSON in data");
-                        console.log(arrM[j]);
-                        p2 = data[u2];
-                        arrU = Object.keys(data[u2]);
-                        out = "<div class='container' id='moove" + j + "' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
-                        for (var i = 0; i < arrU.length; i++) {
-                            tempMove = p2[arrU[i]].startup;
-                            if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
-                                tempMove += 3;
-                            }//if aerial
-                            else {
-                                if (arrU[i] == ("UpSmash") || arrU[i] == ("Grab") || arrU[i] == ("UpB")) {
-                                    tempMove += 0;
-                                } //if no oos lag
-                                else {
-                                    if (arrU[i].includes("Dash") || arrU[i].includes("Turnaround")) {
-                                        tempMove += 12;
-                                    }//if requires initial dash
-                                    else {
-                                        if (arrU[i] == ("Pivot Grab")) {
-                                            tempMove += 13;
-                                        }//if pivot grab
-                                        else {
-                                            tempMove += 11;
-                                        }//if normal move
-                                    }//if does not require initial dash (fuck you dylan I know pivot grab requires initial dash)
-                                }//if has oos lag
-                            }//if not aerial
-                            tempMove = 0 - tempMove;
-                            if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
-                                out += "<li>";
-                                out += arrU[i];
-                                out += "</li>";
-                            }//if can punish
-                        }//for
-                        if (out == "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>") {
-                            out += "Safe On Shield";
-                        } //if safe on shield
-                        out += "</ul></div>";
-                    }
-                    document.getElementById("output").innerHTML = out + "</ul></div>";
+            return data[name];
+        }
+
+
+
+        function ChangeSecondList(value) {
+            document.getElementById("static-list-div").style.display = "none";
+            document.getElementById("move1-div").style.display = "block";
+            var dropid = document.getElementById("move1");
+            ta = value;
+            console.log(ta);
+            u1 = getData(ta);
+            console.log(u1);
+            keys = Object.keys(u1);
+            console.log(keys)
+            for (var i = 0; i < keys.length; i++) {
+                dropid.options[i].text = keys[i];
+                dropid.options[i].value = keys[i];
+            }
+        }
+
+        function getMove() {
+            u1 = document.getElementById("char1").value;
+            m1 = document.getElementById("move1").value;
+            u2 = document.getElementById("char2").value;
+            message = "";
+            console.log("This is u1");
+            console.log(u1);
+            console.log("This is m1");
+            console.log(m1);
+            console.log("This is u2");
+            console.log(u2);
+            if (u1 == "" || m1 == "" || u2 == "") {
+                message = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                message += "Please select";
+                if (u1 == "" && m1 == "" && u2 == "") {
+                    message += " an attacking character, a move for the attacking character to use, and a shielding character";
+                }//if all 3 blank
+                if (u1 == "" && m1 == "" && u2 != "") {
+                    message += " an attacking character, and a move for the attacking character to use";
+                }//if u1 and m1 blank
+                if (u1 == "" && m1 != "" && u2 == "") {
+                    message += " an attacking character, and a shielding character";
+                }//if u1 and u2 blank
+                if (u1 == "" && m1 != "" && u2 != "") {
+                    message += " an attacking character";
+                }//if u1 blank
+                if (u1 != "" && m1 == "" && u2 == "") {
+                    message += " a move for the attacking character to use, and a shielding character";
+                }//if m1 and u2 blank
+                if (u1 != "" && m1 == "" && u2 != "") {
+                    message += " a move for the attacking character to use";
+                }//if m1 and u2 blank
+                if (u1 != "" && m1 != "" && u2 == "") {
+                    message += " a shielding character";
                 }
-                catch{
+            }
+            if (message != "") {
+                document.getElementById("output").innerHTML = message + "</ul></div>";
+            }
+            else {
+                try {
+                    d1 = getData(u1);
+                    d2= getData(u2);
+                    p1 = d1[m1].advantage;
+                    p2 = d2;
+                    console.log("This is d1");
+                    console.log(d1);
+                    console.log("This is d2");
+                    console.log(d2);
+                    console.log("This is p1");
+                    console.log(p1);
+                    console.log("This is p2");
+                    console.log(p2);
+                    arrU = Object.keys(p2);
+                    console.log("This is arrU");
+                    console.log(arrU);
+                    out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+                    for (var i = 0; i < arrU.length; i++) {
+                        tempMove = p2[arrU[i]].startup;
+                        if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
+                            tempMove += 3;
+                        }//if aerial
+                        else {
+                            if (arrU[i] == ("UpSmash") || arrU[i] == ("Grab") || arrU[i] == ("UpB")) {
+                                tempMove += 0;
+                            } //if no oos lag
+                            else {
+                                if (arrU[i].includes("Dash") || arrU[i].includes("Turnaround")) {
+                                    tempMove += 12;
+                                }//if requires initial dash
+                                else {
+                                    if (arrU[i] == ("Pivot Grab")) {
+                                        tempMove += 13;
+                                    }//if pivot grab
+                                    else {
+                                        tempMove += 11;
+                                    }//if normal move
+                                }//if does not require initial dash (fuck you dylan I know pivot grab requires initial dash)
+                            }//if has oos lag
+                        }//if not aerial
+                        tempMove = 0 - tempMove;
+                        if ((tempMove > p1) && arrU[i] != "UpBAir" && arrU[i] != "SideBAir") {
+                            out += "<li>";
+                            out += arrU[i];
+                            out += "</li>";
+                        }//if can punish
+                    }//for
+                    if (out == "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>") {
+                        out += "Safe On Shield";
+                    } //if safe on shield
+                    document.getElementById("output").innerHTML = out + "</ul></div>";
+                }//try
+                catch (err) {
                     out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
                     out += "The attacking character cannot use the move that is selected";
                     document.getElementById("output").innerHTML = out + "</ul></div>";
-                }//catchCatch
-            }//catch
+                }//catch
+            }
+
         }//function
+
+
+        ChangeSecondList(document.getElementById("char1").options[document.getElementById("char1").selectedIndex].value);
     </script>
 </head>
 
 <body>
-
-    <!-- Header -->
-    <header id="header">
-        <h1><strong><a href="index.html">Drexel Smash Ultimate</a></strong></h1>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Discord Link</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="improve.html">Get Good</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <a href="#menu" class="navPanelToggle" style="height:50px"><span class="fa fa-bars"></span></a>
-    <!-- Main -->
-    <section id="main" class="wrapper">
-        <div class="container" id="filler" style="height:100px; width:100%">
-
-        </div>
-        <div class="container">
-            <form id="set" action="/calc.html">
-                <div class="select-wrapper" style="width:45%; float:left">
-                    Attacking
-                    <select name="char1" id="char1">
-                        <option value="Tester">- Tester -</option>
-                        <option value="DK">Donkey Kong</option>
-                        <option value="DuckHunt">Duck Hunt</option>
-                        <option value="Greninja">Greninja</option>
-                        <option value="Ike">Ike</option>
-                        <option value="Incineroar">Incineroar</option>
-                        <option value="Joker">Joker</option>
-                        <option value="Dedede">King Dedede</option>
-                        <option value="Lucas">Lucas</option>
-                        <option value="MetaKnight">Meta Knight</option>
-                        <option value="Plant">Piranah Plant</option>
-                        <option value="Pit">Pit</option>
-                        <option value="Ridley">Ridley</option>
-                        <option value="Robin">Robin</option>
-                        <option value="ZSS">Zero Suit Samus</option>
-                    </select>
-                    <select name="move1" id="move1">
-                        <option value="TestMove">- Tester -</option>
-                        <option value="Jab"> Jab</option>
-                        <option value="ForwardTilt"> Forward Tilt</option>
-                        <option value="UpTilt"> Up Tilt</option>
-                        <option value="DownTilt"> Down Tilt</option>
-                        <option value="DashAttack"> Dash Attack</option>
-                        <option value="ForwardSmash"> Forward Smash</option>
-                        <option value="UpSmash"> Up Smash</option>
-                        <option value="DownSmash"> Down Smash</option>
-                        <option value="NeutralAir"> Neutral Air</option>
-                        <option value="ForwardAir"> Forward Air</option>
-                        <option value="BackAir"> Back Air</option>
-                        <option value="UpAir"> Up Air</option>
-                        <option value="DownAir"> Down Air</option>
-                        <option value="ZAir"> Z-Air</option>
-                        <option value="NeutralB"> Neutral B</option>
-                        <option value="SideB"> Side B</option>
-                        <option value="UpB"> Up B</option>
-                        <option value="DownB"> Down B</option>
-
+    <div class="container">
+        <form id="set" action="/calc.html">
+            <div class="select-wrapper" style="width:45%; float:left">
+                Attacking
+                <select id="char1" onchange="ChangeSecondList(this.options[this.selectedIndex].value)"
+                    name="arrival">
+                    <option value="">Select Character</option>
+                    <option value="DK">Donkey Kong</option>
+                    <option value="DuckHunt">Duck Hunt</option>
+                    <option value="Greninja">Greninja</option>
+                    <option value="Ike">Ike</option>
+                    <option value="Incineroar">Incineroar</option>
+                    <option value="Joker">Joker</option>
+                    <option value="Dedede">King Dedede</option>
+                    <option value="Lucas">Lucas</option>
+                    <option value="MetaKnight">Meta Knight</option>
+                    <option value="Plant">Piranah Plant</option>
+                    <option value="Pit">Pit</option>
+                    <option value="Ridley">Ridley</option>
+                    <option value="Robin">Robin</option>
+                    <option value="ZSS">Zero Suit Samus</option>
+                </select>
+                <div id="static-list-div" style="display:block;">
+                    <select>
+                        <option value = "">&#8679; Select an attacking character</option>
                     </select>
                 </div>
-                <div class="select-wrapper" style="width:45%; float:right; margin-bottom:60px">
-                    Shielding
-                    <select name="char2" id="char2">
-                        <option value="Tester">- Tester -</option>
-                        <option value="DK">Donkey Kong</option>
-                        <option value="DuckHunt">Duck Hunt</option>
-                        <option value="Greninja">Greninja</option>
-                        <option value="Ike">Ike</option>
-                        <option value="Incineroar">Incineroar</option>
-                        <option value="Joker">Joker</option>
-                        <option value="Dedede">King Dedede</option>
-                        <option value="Lucas">Lucas</option>
-                        <option value="MetaKnight">Meta Knight</option>
-                        <option value="Plant">Piranah Plant</option>
-                        <option value="Pit">Pit</option>
-                        <option value="Ridley">Ridley</option>
-                        <option value="Robin">Robin</option>
-                        <option value="ZSS">Zero Suit Samus</option>
+
+                <div id="move1-div" style="display:none;">
+                    <select id="move1" name="serving">
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
+                        <option value="">DO NOT SELECT</option>
                     </select>
-
                 </div>
-                <div class="12u$">
-                    <ul class="actions" style="float:center; width:100%">
-                        <li><input type="button" value="submit" style="float:center; width:100%" class="special"
-                                onclick="getMove()"></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="select-wrapper" id="shielding" style="width:45%; float:right; margin-bottom:60px">
+                Shielding
+                <select name="char2" id="char2">
+                    <option value="">- Character -</option>
+                    <option value="DK">Donkey Kong</option>
+                    <option value="DuckHunt">Duck Hunt</option>
+                    <option value="Greninja">Greninja</option>
+                    <option value="Ike">Ike</option>
+                    <option value="Incineroar">Incineroar</option>
+                    <option value="Joker">Joker</option>
+                    <option value="Dedede">King Dedede</option>
+                    <option value="Lucas">Lucas</option>
+                    <option value="MetaKnight">Meta Knight</option>
+                    <option value="Plant">Piranah Plant</option>
+                    <option value="Pit">Pit</option>
+                    <option value="Ridley">Ridley</option>
+                    <option value="Robin">Robin</option>
+                    <option value="ZSS">Zero Suit Samus</option>
+                </select>
 
-            </form>
-        </div>
-        <div class="container" id="output">
+            </div>
+            <div class="12u$">
+                <ul class="actions" style="float:center; width:100%">
+                    <li><input type="button" value="submit" style="float:center; width:100%" class="special"
+                            onclick="getMove()"></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div class="container" id="output">
 
-        </div>
+    </div>
 
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer id="footer" style="margin-top:50px">
         <div class="container">
             <ul class="copyright">
                 <li>&copy; Untitled</li>
