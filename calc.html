@@ -249,16 +249,16 @@
                         "UpSmashArsene": { "startup": 10, "landinglag": 0, "advantage": -30 },
                     },
                     "DownSmash": {
-                        "DownSmash": { "startup": 1216, "landinglag": 0, "advantage": -20 },
-                        "DownSmashArsene": { "startup": 1216, "landinglag": 0, "advantage": -18 },
+                        "DownSmash": { "startup": 12, "landinglag": 0, "advantage": -20 },
+                        "DownSmashArsene": { "startup": 12, "landinglag": 0, "advantage": -18 },
                     },
                     "NeutralAir": {
                         "NeutralAir": { "startup": 12, "landinglag": 8, "advantage": -5 },
                         "NeutralAirArsene": { "startup": 12, "landinglag": 8, "advantage": -5 },
                     },
                     "ForwardAir": {
-                        "ForwardAir": { "startup": 712, "landinglag": 12, "advantage": -10 },
-                        "ForwardAirArsene": { "startup": 712, "landinglag": 12, "advantage": -9 },
+                        "ForwardAir": { "startup": 7, "landinglag": 12, "advantage": -10 },
+                        "ForwardAirArsene": { "startup": 7, "landinglag": 12, "advantage": -9 },
                     },
                     "BackAir": {
                         "BackAir": { "startup": 7, "landinglag": 9, "advantage": -5 },
@@ -536,13 +536,14 @@
             try {
                 p1 = data[u1][m1].advantage;
                 console.log(data[u1]);
-                console.log(data[m1]);
+                console.log(m1);
                 console.log(data[u1][m1]);
                 console.log(data[u1][m1].advantage);
                 p2 = data[u2];
                 arrU = Object.keys(data[u2]);
                 out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
                 for (var i = 0; i < arrU.length; i++) {
+                    console.log(p2[arrU[i]].startup);
                     tempMove = p2[arrU[i]].startup;
                     if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
                         tempMove += 3;
