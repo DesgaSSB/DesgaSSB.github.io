@@ -543,8 +543,9 @@
                 arrU = Object.keys(data[u2]);
                 out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
                 for (var i = 0; i < arrU.length; i++) {
-                    console.log(p2[arrU[i]].startup);
+                    
                     tempMove = p2[arrU[i]].startup;
+                    console.log(tempMove);
                     if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
                         tempMove += 3;
                     }//if aerial
