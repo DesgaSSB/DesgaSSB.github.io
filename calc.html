@@ -614,7 +614,7 @@
             else {
                 try {
                     d1 = getData(u1);
-                    d2= getData(u2);
+                    d2 = getData(u2);
                     p1 = d1[m1].advantage;
                     p2 = d2;
                     console.log("This is d1");
@@ -679,155 +679,172 @@
 </head>
 
 <body>
-    <div class="container">
-        <form id="set" action="/calc.html">
-            <div class="select-wrapper" style="width:45%; float:left">
-                Attacking
-                <select id="char1" onchange="ChangeSecondList(this.options[this.selectedIndex].value)"
-                    name="arrival">
-                    <option value="">Select Character</option>
-                    <option value="DK">Donkey Kong</option>
-                    <option value="DuckHunt">Duck Hunt</option>
-                    <option value="Greninja">Greninja</option>
-                    <option value="Ike">Ike</option>
-                    <option value="Incineroar">Incineroar</option>
-                    <option value="Joker">Joker</option>
-                    <option value="Dedede">King Dedede</option>
-                    <option value="Lucas">Lucas</option>
-                    <option value="MetaKnight">Meta Knight</option>
-                    <option value="Plant">Piranah Plant</option>
-                    <option value="Pit">Pit</option>
-                    <option value="Ridley">Ridley</option>
-                    <option value="Robin">Robin</option>
-                    <option value="ZSS">Zero Suit Samus</option>
-                </select>
-                <div id="static-list-div" style="display:block;">
-                    <select>
-                        <option value = "">&#8679; Select an attacking character</option>
+    <!-- Header -->
+    <header id="header">
+        <h1><strong><a href="index.html">Drexel Smash Ultimate</a></strong></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Discord Link</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="improve.html">Get Good</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    <!-- Main -->
+    <section id="main" class="wrapper">
+        <div class="container">
+            <form id="set" action="/calc.html">
+                <div class="select-wrapper" style="width:45%; float:left">
+                    Attacking
+                    <select id="char1" onchange="ChangeSecondList(this.options[this.selectedIndex].value)"
+                        name="arrival">
+                        <option value="">Select Character</option>
+                        <option value="DK">Donkey Kong</option>
+                        <option value="DuckHunt">Duck Hunt</option>
+                        <option value="Greninja">Greninja</option>
+                        <option value="Ike">Ike</option>
+                        <option value="Incineroar">Incineroar</option>
+                        <option value="Joker">Joker</option>
+                        <option value="Dedede">King Dedede</option>
+                        <option value="Lucas">Lucas</option>
+                        <option value="MetaKnight">Meta Knight</option>
+                        <option value="Plant">Piranah Plant</option>
+                        <option value="Pit">Pit</option>
+                        <option value="Ridley">Ridley</option>
+                        <option value="Robin">Robin</option>
+                        <option value="ZSS">Zero Suit Samus</option>
                     </select>
-                </div>
+                    <div id="static-list-div" style="display:block;">
+                        <select>
+                            <option value="">&#8679; Select an attacking character</option>
+                        </select>
+                    </div>
 
-                <div id="move1-div" style="display:none;">
-                    <select id="move1" name="serving">
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
-                        <option value="">DO NOT SELECT</option>
+                    <div id="move1-div" style="display:none;">
+                        <select id="move1" name="serving">
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                            <option value="">DO NOT SELECT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper" id="shielding" style="width:45%; float:right; margin-bottom:60px">
+                    Shielding
+                    <select name="char2" id="char2">
+                        <option value="">- Character -</option>
+                        <option value="DK">Donkey Kong</option>
+                        <option value="DuckHunt">Duck Hunt</option>
+                        <option value="Greninja">Greninja</option>
+                        <option value="Ike">Ike</option>
+                        <option value="Incineroar">Incineroar</option>
+                        <option value="Joker">Joker</option>
+                        <option value="Dedede">King Dedede</option>
+                        <option value="Lucas">Lucas</option>
+                        <option value="MetaKnight">Meta Knight</option>
+                        <option value="Plant">Piranah Plant</option>
+                        <option value="Pit">Pit</option>
+                        <option value="Ridley">Ridley</option>
+                        <option value="Robin">Robin</option>
+                        <option value="ZSS">Zero Suit Samus</option>
                     </select>
+
                 </div>
-            </div>
-            <div class="select-wrapper" id="shielding" style="width:45%; float:right; margin-bottom:60px">
-                Shielding
-                <select name="char2" id="char2">
-                    <option value="">- Character -</option>
-                    <option value="DK">Donkey Kong</option>
-                    <option value="DuckHunt">Duck Hunt</option>
-                    <option value="Greninja">Greninja</option>
-                    <option value="Ike">Ike</option>
-                    <option value="Incineroar">Incineroar</option>
-                    <option value="Joker">Joker</option>
-                    <option value="Dedede">King Dedede</option>
-                    <option value="Lucas">Lucas</option>
-                    <option value="MetaKnight">Meta Knight</option>
-                    <option value="Plant">Piranah Plant</option>
-                    <option value="Pit">Pit</option>
-                    <option value="Ridley">Ridley</option>
-                    <option value="Robin">Robin</option>
-                    <option value="ZSS">Zero Suit Samus</option>
-                </select>
+                <div class="12u$">
+                    <ul class="actions" style="float:center; width:100%">
+                        <li><input type="button" value="submit" style="float:center; width:100%" class="special"
+                                onclick="getMove()"></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="container" id="output">
 
-            </div>
-            <div class="12u$">
-                <ul class="actions" style="float:center; width:100%">
-                    <li><input type="button" value="submit" style="float:center; width:100%" class="special"
-                            onclick="getMove()"></li>
-                </ul>
-            </div>
-        </form>
-    </div>
-    <div class="container" id="output">
-
-    </div>
+        </div>
 
     </section>
 
