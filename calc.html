@@ -15,6 +15,31 @@
     <script>
         function getMove() {
             data = {
+		    "Tester": {
+                    "Jab": { "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "RapidJab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "ForwardTilt":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpTilt":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownTilt":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DashAttack":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "ForwardSmash":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpSmash":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownSmash":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "NeutralAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "ForwardAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "BackAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "NeutralB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "SideB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "UpBAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownB":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DownBAir":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "Grab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "DashGrab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                    "PivotGrab":{ "startup": 1000, "landinglag": 0, "advantage": -1000 },
+                },
                 "DK": {
                     "Jab": { "startup": 5, "landinglag": 0, "advantage": -24 },
                     "RapidJab": { "startup": 100, "landinglag": 0, "advantage": -100 },
@@ -663,7 +688,7 @@
                 <div class="select-wrapper" style="width:45%; float:left">
                     Attacking
                     <select name="char1" id="char1">
-                        <option value="">- Character -</option>
+                        <option value="Tester">- Tester -</option>
                         <option value="DK">Donkey Kong</option>
                         <option value="DuckHunt">Duck Hunt</option>
                         <option value="Greninja">Greninja</option>
@@ -680,7 +705,7 @@
                         <option value="ZSS">Zero Suit Samus</option>
                     </select>
                     <select name="move1" id="move1">
-                        <option value="">- Move -</option>
+                        <option value="TestMove">- Tester -</option>
                         <option value="Jab"> Jab</option>
                         <option value="ForwardTilt"> Forward Tilt</option>
                         <option value="UpTilt"> Up Tilt</option>
@@ -705,7 +730,7 @@
                 <div class="select-wrapper" style="width:45%; float:right; margin-bottom:60px">
                     Shielding
                     <select name="char2" id="char2">
-                        <option value="">- Character -</option>
+                        <option value="Tester">- Tester -</option>
                         <option value="DK">Donkey Kong</option>
                         <option value="DuckHunt">Duck Hunt</option>
                         <option value="Greninja">Greninja</option>
