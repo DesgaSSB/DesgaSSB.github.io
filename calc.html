@@ -40,61 +40,395 @@
                     "Down Air Multi": { "startup": 10, "landinglag": 16, "advantage": -14 },
                     "Down Air Final": { "startup": 34, "landinglag": 16, "advantage": -13 },
                     "Z-Air": { "startup": 9, "landinglag": 8, "advantage": -2 },
-                    "Neutral-B PKFreeze Uncharged": { "startup": 40, "landinglag": 0, "advantage": -14 },
-                    "Neutral-B PKFreezeFully Charged": { "startup": 92, "landinglag": 0, "advantage": -5 },
-                    "Side-B PKFire": { "startup": 21, "landinglag": 22, "advantage": -24 },
-                    "Up-B PKThunder": { "startup": 20, "landinglag": 0, "advantage": 100 },
-                    "Up-B PKThunderSelf-hit": { "startup": 1, "landinglag": 30, "advantage": -21 },
-                    "Down-B PSIMagnet": { "startup": 19, "landinglag": 0, "advantage": +0 },
-                    "Down-B PSIMagnetAbsorb": { "startup": 7, "landinglag": 0, "advantage": -12 },
+                    "Neutral B PKFreeze Uncharged": { "startup": 40, "landinglag": 0, "advantage": -14 },
+                    "Neutral B PKFreezeFully Charged": { "startup": 92, "landinglag": 0, "advantage": -5 },
+                    "Side B PKFire": { "startup": 21, "landinglag": 22, "advantage": -24 },
+                    "Up B PKThunder": { "startup": 20, "landinglag": 0, "advantage": 100 },
+                    "Up B PKThunderSelf-hit": { "startup": 100, "landinglag": 30, "advantage": -21 },
+                    "Down B PSIMagnet": { "startup": 19, "landinglag": 0, "advantage": +0 },
+                    "Down B PSIMagnetAbsorb": { "startup": 7, "landinglag": 0, "advantage": -12 },
                     "Grab": { "startup": 12, "advantage": 100 },
-                    "Dash Grab": { "startup": 15, "advantage": 100 },
+                    "Dash/Turnaround Grab": { "startup": 15, "advantage": 100 },
                     "Pivot Grab": { "startup": 14, "advantage": 100 },
                 },
-                "Charizard": {
-                    "Jab  1": { "startup": 4, "totalframes": 22, "landinglag": 0, "basedamage": 2.5, "shieldlag": 7, "shieldstun": 4, "whichhitbox": '—', "advantage": -14, "activeframes": "4—5" },
-                    "Jab  2": { "startup": 5, "totalframes": 25, "landinglag": '--', "notes": Transitions to jab 3 as early as frame 8 , "basedamage": 2.5, "shieldlag": 6, "shieldstun": 4, "whichhitbox": '—', "advantage": -16, "activeframes": 5—6 },
-                    "Jab  3": { "startup": 7, "totalframes": 33, "landinglag": '--', "notes": '—', "basedamage": 5.0, "shieldlag": 9, "shieldstun": 6, "whichhitbox": '—', "advantage": -20, "activeframes": '7—8' },
-                    "Forward  Tilt Close,": { "startup": 12, "totalframes": 37, "landinglag": '--', "notes": '--', "basedamage": 7.0, "shieldlag": 7, "shieldstun": 7, "whichhitbox": Close, "advantage": -18, "activeframes": '12—13' },
-
-                    "Forward  Tilt Far,": { "startup": 12, "totalframes": 37, "landinglag": '--', "notes": '--', "basedamage": 11.0, "shieldlag": 8, "shieldstun": 10, "whichhitbox": Far, "advantage": -15, "activeframes": '12—13' },
-                    "Up  Tilt,": { "startup": 9, "totalframes": 33, "landinglag": '--', "notes": '--', "basedamage": 8.0, "shieldlag": 7, "shieldstun": 8, "whichhitbox": '--', "advantage": -16, "activeframes": '9—12' },
-                    "Down  Tilt,": { "startup": 9, "totalframes": 30, "landinglag": '--', "notes": '--', "basedamage": 10.0, "shieldlag": 10, "shieldstun": 10, "whichhitbox": '--', "advantage": -11, "activeframes": '9—10' },
-                    "Dash  Attack Early,": { "startup": 10, "totalframes": 39, "landinglag": '--', "notes": '--', "basedamage": 13.0, "shieldlag": 9, "shieldstun": 17, "whichhitbox": 'Early', "advantage": -12, "activeframes": '10—12' },
-
-                    "Dash  Attack Late,": { "startup": 10, "totalframes": 39, "landinglag": '--', "notes": '--', "basedamage": 10.0, "shieldlag": 8, "shieldstun": 14, "whichhitbox": 'Late', "advantage": -12, "activeframes": '13—20' },
-                    "Forward  Smash Close,": { "startup": 22, "totalframes": 69, "landinglag": '--', "notes": Invulnerable on frame 20 - 24. Charge hold is frame 15, "basedamage": 19.0, "shieldlag": 15, "shieldstun": 11, "whichhitbox": Close, "advantage": -36, "activeframes": 22 },
-                    "Forward  Smash Far,": { "startup": 22, "totalframes": 69, "landinglag": '--', "notes": Invulnerable on frame 20 - 24. Charge hold is frame 15, "basedamage": 16.4, "shieldlag": 10, "shieldstun": 10, "whichhitbox": Far, "advantage": -37, "activeframes": 23—24 },
-
-                    "Up  Smash 1,": { "startup": 6, "totalframes": 46, "landinglag": '--', "notes": Charge hold is frame 2, "basedamage": 5.0, "shieldlag": 6, "shieldstun": 4, "whichhitbox": Hit 1Ground Only / Late, "advantage": -24, "activeframes": 6 / 7 - 9
+                "Incineroar": {
+                    "Jab 1": {
+                        "startup": 5, "totalframes": 23, "landinglag": 0, "basedamage": 2.5, "shieldlag": 5, "shieldstun": 4, "advantage": -14
+                    },
+                    "Jab 2": {
+                        "startup": 4, "totalframes": 31, "landinglag": 0, "basedamage": 2.8, "shieldlag": 6, "shieldstun": 4, "advantage": -23
+                    },
+                    "Jab 3": {
+                        "startup": 4, "totalframes": 37, "landinglag": 0, "basedamage": 4.7, "shieldlag": 6, "shieldstun": 5, "advantage": -28
+                    },
+                    "Forward Tilt": {
+                        "startup": 12, "totalframes": 36, "landinglag": 0, "basedamage": 13.0, "shieldlag": 11, "shieldstun": 12, "advantage": -12
+                    },
+                    "Up Tilt": {
+                        "startup": 6, "totalframes": 34, "landinglag": 0, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 9, "advantage": -19
+                    },
+                    "Down Tilt": {
+                        "startup": 9, "totalframes": 29, "landinglag": 0, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 9, "advantage": -11
+                    },
+                    "Dash Attack Early": {
+                        "startup": 8, "totalframes": 41, "landinglag": 0, "basedamage": 13.0, "shieldlag": 9, "shieldstun": 12, "advantage": -21
+                    },
+                    "Dash Attack Late": {
+                        "startup": 8, "totalframes": 41, "landinglag": 0, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 19, "advantage": -21
+                    },
+                    "Forward Smash Close": {
+                        "startup": 16, "totalframes": 51, "landinglag": 0, "basedamage": 20.0, "shieldlag": 14, "shieldstun": 13, "advantage": -22
+                    }, "Forward Smash Far": {
+                        "startup": 16, "totalframes": 51, "landinglag": 0, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 11, "advantage": 024
+                    },
+                    "Up Smash": {
+                        "startup": 13, "totalframes": 47, "landinglag": 0, "basedamage": 17.0, "shieldlag": 10, "shieldstun": 11, "advantage": -23
+                    },
+                    "Down Smash": {
+                        "startup": 18, "totalframes": 57, "landinglag": 0, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 11, "advantage": -28
+                    },
+                    "Neutral Air Early": {
+                        "startup": 5, "totalframes": 41, "landinglag": 11, "basedamage": 13.0, "shieldlag": 9, "shieldstun": 5, "advantage": -6
+                    },
+                    "Neutral Air Late": {
+                        "startup": 5, "totalframes": 41, "landinglag": 11, "basedamage": 7.0, "shieldlag": 7, "shieldstun": 3, "advantage": 08
+                    }, "Forward Air Close": {
+                        "startup": 8, "totalframes": 44, "landinglag": 14, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 5, "advantage": -9
+                    },
+                    "Forward Air Far": {
+                        "startup": 8, "totalframes": 44, "landinglag": 14, "basedamage": 13.0, "shieldlag": 10, "shieldstun": 5, "advantage": 09
+                    },
+                    "Back Air Close": {
+                        "startup": 7, "totalframes": 41, "landinglag": 11, "basedamage": 11.0, "shieldlag": 8, "shieldstun": 4, "advantage": -7
+                    },
+                    "Back Air Far": {
+                        "startup": 7, "totalframes": 41, "landinglag": 11, "basedamage": 13.0, "shieldlag": 10, "shieldstun": 5, "advantage": 06
+                    },
+                    "Up Air": {
+                        "startup": 7, "totalframes": 31, "landinglag": 8, "basedamage": 8.0, "shieldlag": 7, "shieldstun": 4, "advantage": -4
+                    },
+                    "Down Air Close": {
+                        "startup": 16, "totalframes": 44, "landinglag": 16, "basedamage": 14.0, "shieldlag": 10, "shieldstun": 5, "advantage": -11
+                    },
+                    "Down Air Late": {
+                        "startup": 16, "totalframes": 44, "landinglag": 16, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 4, "advantage": -12
+                    },
+                    "Down Air Meteor": {
+                        "startup": 16, "totalframes": 44, "landinglag": 16, "basedamage": 15.0, "shieldlag": 10, "shieldstun": 5, "advantage": -11
+                    },
+                    "Neutral B Darkest LariatEarly": {
+                        "startup": 5, "totalframes": 84, "landinglag": 0, "basedamage": 16.0, "shieldlag": 12, "shieldstun": 14, "advantage": -65
+                    },
+                    "Neutral B Darkest Lariat Late": {
+                        "startup": 15, "totalframes": 84, "landinglag": 0, "basedamage": 6.0, "shieldlag": 7, "shieldstun": 8, "advantage": -65
+                    },
+                    "Side B Alolan Whip Grab": {
+                        "startup": 18, "totalframes": 59, "landinglag": 0, "basedamage": 0, "shieldlag": 0, "shieldstun": 0, "advantage": -100
+                    },
+                    "Side B Alolan Whip Lariat Attack": {
+                        "startup": 7, "totalframes": 47, "landinglag": 0, "basedamage": 20.0, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Side B Alolan WhipBack Body Drop": {
+                        "startup": 8, "totalframes": 42, "landinglag": 0, "basedamage": 12.0, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Side B Alolan Whip ChestBounce Failure": {
+                        "startup": 0, "totalframes": 32, "landinglag": 0, "basedamage": 4.0, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Up B Cross Chop Rising": {
+                        "startup": 11, "totalframes": 79, "landinglag": 61 / 35, "basedamage": 3.0, "shieldlag": 9, "shieldstun": 4, "advantage": -51
+                    },
+                    "Up B Cross Chop Falling Early": {
+                        "startup": 38, "totalframes": 79, "landinglag": 61, "basedamage": 7.0, "shieldlag": 10, "shieldstun": 7, "advantage": -51
+                    },
+                    "Up B Cross Chop Falling Late": {
+                        "startup": 38, "totalframes": 79, "landinglag": 61, "basedamage": 11.0, "shieldlag": 10, "shieldstun": 10, "advantage": -51
+                    },
+                    "Up B Cross Chop Landing": {
+                        "startup": 38, "totalframes": 79, "landinglag": 61, "basedamage": 9.0, "shieldlag": 10, "shieldstun": 9, "advantage": -51
+                    },
+                    "Down B Revenge": {
+                        "startup": 3, "totalframes": 58, "landinglag": 0
+                        , "basedamage": 0, "shieldlag": 0, "shieldstun": 0, "advantage": 0
+                    },
+                    "DownB Revenge Counter Attack": {
+                        "startup": 7, "totalframes": 28, "landinglag": 0, "basedamage": 2.4, "shieldlag": 0, "shieldstun": 0, "advantage": 0
+                    },
+                    "Grab": {
+                        "startup": 8, "totalframes": 38, "landinglag": 0, "basedamage": 0, "advantage": 100
+                    },
+                    "Dash/Turnaround Grab": {
+                        "startup": 12, "totalframes": 46, "landinglag": 0, "basedamage": 0, "advantage": 100
+                    },
+                    "Pivot Grab": {
+                        "startup": 13, "totalframes": 44, "landinglag": 0, "basedamage": 0, "advantage": 100
+                    },
                 },
-                "Up  Smash 2,": { "startup": 14, "totalframes": 46, "landinglag": '--', "notes": Charge hold is frame 2, "basedamage": 11.0, "shieldlag": 8, "shieldstun": 8, "whichhitbox": Hit 2, "advantage": -24, "activeframes": 14—19 },
-                "Down  Smash,": { "startup": 14, "totalframes": 60, "landinglag": '--', "notes": Charge hold is frame 1, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 11, "whichhitbox": '--', "advantage": -35, "activeframes": 14—16, "moves": },
-                "Neutral  Air Close,": { "startup": 8, "totalframes": 39, "landinglag": 10, "notes": Autocancels on frame 1 - 3 and 31 onward, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 4, "whichhitbox": Close, "advantage": -6, "activeframes": 8—20 },
-                "Neutral  Air Far,": { "startup": 8, "totalframes": 39, "landinglag": 10, "notes": Autocancels on frame 1 - 3 and 31 onward, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 5, "whichhitbox": Far, "advantage": -5, "activeframes": 8—20},
-                "Forward  Air Close,": { , "startup": 8, "totalframes": 45, "landinglag": 19, "notes": Autocancels on frame 1 - 4 and 35 onward, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 5, "whichhitbox": Close, "advantage": -14, "activeframes": 8—9 },
-                "Forward  Air Far,": { , "startup": 8, "totalframes": 45, "landinglag": 19
-                    "notes": Autocancels on frame 1 - 4 and 35 onward, "basedamage": 13.0, "shieldlag": 9, "shieldstun": 5, "whichhitbox": Far, "advantage": -14, "activeframes": 10—11
+                "Ridley": {
+                    "Jab 1": {
+                        "startup": 4, "totalframes": 23, "landinglag": 0, "basedamage": 2.0, "shieldlag": 7, "shieldstun": 3, "advantage": -16
+                    },
+                    "Jab 2": {
+                        "startup": 5, "totalframes": 26, "landinglag": 0, "basedamage": 1.5, "shieldlag": 5, "shieldstun": 3, "advantage": -18
+                    },
+                    "Jab 3": {
+                        "startup": 4, "totalframes": 35, "landinglag": 0, "basedamage": 5.0, "shieldlag": 11, "shieldstun": 6, "advantage": -25
+                    },
+                    "Rapid Jab": {
+                        "startup": 4, "totalframes": 0, "landinglag": 0, "basedamage": 0.7, "shieldlag": 4, "shieldstun": 0, "advantage": 0
+                    },
+                    "Rapid Jab Finisher": {
+                        "startup": 4, "totalframes": 45, "landinglag": 0, "basedamage": 2.0, "shieldlag": 9, "shieldstun": 3, "advantage": -38
+                    },
+                    "Forward Tilt Close": {
+                        "startup": 10, "totalframes": 32, "landinglag": 0, "basedamage": 10.0, "shieldlag": 8, "shieldstun": 10, "advantage": -12
+                    },
+                    "Forward Tilt Far": {
+                        "startup": 10, "totalframes": 32, "landinglag": 0, "basedamage": 13.0, "shieldlag": 11, "shieldstun": 12, "advantage": -10
+                    },
+                    "Up Tilt 1": {
+                        "startup": 8, "totalframes": 29, "landinglag": 0, "basedamage": 7.0, "shieldlag": 7, "shieldstun": 7, "advantage": -14
+                    },
+                    "Up Tilt 2": {
+                        "startup": 8, "totalframes": 29, "landinglag": 0, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 9, "advantage": -12
+                    },
+                    "Down Tilt Close": {
+                        "startup": 9, "totalframes": 30, "landinglag": 0, "basedamage": 6.0, "shieldlag": 6, "shieldstun": 6, "advantage": -15
+                    },
+                    "Down Tilt Far": {
+                        "startup": 9, "totalframes": 30, "landinglag": 0, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 9, "advantage": -12
+                    },
+                    "Dash Attack": {
+                        "startup": 12, "totalframes": 39, "landinglag": 0, "basedamage": 12.0, "shieldlag": 10, "shieldstun": 11, "advantage": -16
+                    },
+                    "Forward Smash": {
+                        "startup": 18, "totalframes": 53, "landinglag": 0, "basedamage": 20.0, "shieldlag": 11, "shieldstun": 13, "advantage": -22
+                    },
+                    "Up Smash": {
+                        "startup": 12, "totalframes": 47, "landinglag": 0, "basedamage": 17.0, "shieldlag": 10, "shieldstun": 11, "advantage": -24
+                    },
+                    "Down Smash": {
+                        "startup": 24, "totalframes": 57, "landinglag": 0, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 11, "advantage": -22
+                    },
+                    "Neutral Air Close": {
+                        "startup": 8, "totalframes": 39, "landinglag": 12, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 4, "advantage": -8
+                    },
+                    "Neutral Air Far": {
+                        "startup": 8, "totalframes": 39, "landinglag": 12, "basedamage": 12.0, "shieldlag": 10, "shieldstun": 5, "advantage": -8 / -7 / -9
+                    },
+                    "Neutral Air Late": {
+                        "startup": 8, "totalframes": 39, "landinglag": 12, "basedamage": 8.0, "shieldlag": 6, "shieldstun": 3, "advantage": -9
+                    },
+                    "Forward Air Multi Close": {
+                        "startup": 10, "totalframes": 41, "landinglag": 16, "basedamage": 3.0, "shieldlag": 6, "shieldstun": 2, "advantage": -14
+                    },
+                    "Forward Air Multi Far": {
+                        "startup": 10, "totalframes": 41, "landinglag": 16, "basedamage": 5.0, "shieldlag": 6, "shieldstun": 3, "advantage": -13
+                    },
+                    "Forward Air Final Close": {
+                        "startup": 16, "totalframes": 41, "landinglag": 16, "basedamage": 5.0, "shieldlag": 6, "shieldstun": 3, "advantage": -13
+                    },
+                    "Forward Air Final Far": {
+                        "startup": 16, "totalframes": 41, "landinglag": 16, "basedamage": 7.0, "shieldlag": 6, "shieldstun": 3, "advantage": -13
+                    },
+                    "Back Air": {
+                        "startup": 10, "totalframes": 43, "landinglag": 17, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 5, "advantage": -12
+                    },
+                    "Up Air Close": {
+                        "startup": 11, "totalframes": 39, "landinglag": 14, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 5, "advantage": -9
+                    },
+                    "Up Air Far": {
+                        "startup": 11, "totalframes": 39, "landinglag": 14, "basedamage": 14.0, "shieldlag": 13, "shieldstun": 5, "advantage": -9
+                    },
+                    "Down Air Early Meteor": {
+                        "startup": 11, "totalframes": 55, "landinglag": 32, "basedamage": 14.0, "shieldlag": 11, "shieldstun": 5, "advantage": -27
+                    },
+                    "Down Air Late": {
+                        "startup": 11, "totalframes": 55, "landinglag": 32, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 5, "advantage": -27
+                    },
+                    "Neutral B PlasmaBreath Uncharged": {
+                        "startup": 29, "totalframes": 55, "landinglag": 0, "basedamage": 4.5, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Neutral B PlasmaBreath Fully Charged": {
+                        "startup": 92, "totalframes": 102, "landinglag": 0, "basedamage": 5.67, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Side B Space Pirate Rush": {
+                        "startup": 22, "totalframes": 78, "landinglag": 0, "basedamage": 0, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Side B Space Pirate Rush Air": {
+                        "startup": 22, "totalframes": 60, "landinglag": 0, "basedamage": 0, "shieldlag": 0, "shieldstun": 0, "advantage": 100
+                    },
+                    "Up B WingBlitz": {
+                        "startup": 37, "totalframes": 95, "landinglag": 32, "basedamage": 16.0, "shieldlag": 0, "shieldstun": 0, "advantage": 0
+                    },
+                    "Up B WingBlitz Down": {
+                        "startup": 37, "totalframes": 95, "landinglag": 35, "basedamage": 16.0, "shieldlag": 0, "shieldstun": 0, "advantage": 0
+                    },
+                    "Down B Skewer Far": {
+                        "startup": 30, "totalframes": 96, "landinglag": 0, "basedamage": 0, "shieldlag": 0, "shieldstun": 0, "advantage": -29
+                    },
+                    "Down B Skewer Close": {
+                        "startup": 30, "totalframes": 67, "landinglag": 0, "basedamage": 0, "shieldlag": 0, "shieldstun": 0, "advantage": -29
+                    },
+                    "Grab": {
+                        "startup": 8, "totalframes": 34, "landinglag": 0, "basedamage": 0, "advantage": 100
+                    },
+                    "Dash/Turnaround Grab": {
+                        "startup": 11, "totalframes": 42, "landinglag": 0, "basedamage": 0, "advantage": 100
+                    },
+                    "Pivot Grab": {
+                        "startup": 12, "totalframes": 39, "landinglag": 0, "basedamage": 0, "advantage": 100
+                    }
                 },
-                "Back  Air Close,": { , "startup": 14, "totalframes": 45, "landinglag": 20, "notes": Autocancels on frame 1 - 3 and 44 onward, "basedamage": 11.0, "shieldlag": 8, "shieldstun": 4, "whichhitbox": Close, "advantage": -16, "activeframes": 14 },
-                "Back  Air Mid,": { , "startup": 14, "totalframes": 45, "landinglag": 20, "notes": Autocancels on frame 1 - 3 and 44 onward, "basedamage": 14.0, "shieldlag": 10, "shieldstun": 5, "whichhitbox": mid, "advantage": -15, "activeframes": 15—16 },
-                "Back  Air Far,": { , "startup": 14, "totalframes": 45, "landinglag": 20, "notes": Autocancels on frame 1 - 3 and 44 onward, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 6, "whichhitbox": farther, "advantage": -14, "activeframes": 15—16 },
-                "Up  Air,": { , "startup": 12, "totalframes": 45, "landinglag": 13, "notes": Head intangibility on frame 11 - 15. Autocancels on frame 1 - 3 and 38 onward, "basedamage": 13.0, "shieldlag": 9, "shieldstun": 5, "whichhitbox": '--', "advantage": -8, "activeframes": 12—15 },
-                "Down  Air Early,": { , "startup": 18, "totalframes": 51, "landinglag": 21, "notes": Autocancels on frame 1 - 5 and 42 onward, "basedamage": 14.0, "shieldlag": 10, "shieldstun": 5, "whichhitbox": Early, "advantage": -16, "activeframes": 18—21 },
-                "Down  Air Late,": { , "startup": 18, "totalframes": 51, "landinglag": 21, "notes": Autocancels on frame 1 - 5 and 42 onward, "basedamage": 8.0, "shieldlag": 7, "shieldstun": 4, "whichhitbox": Late, "advantage": -17, "activeframes": 22—25: },
-                "Neutral -B  Flamethrower Close": { , "startup": 19, "totalframes": 70, "landinglag": '--', "notes": Startup and total frames are the minimum.Endlag is 27 from extended use, "basedamage": 2.0, "shieldlag": 4, "shieldstun": 2, "whichhitbox": Close, "advantage": -24, "activeframes": --},
-                "Neutral -B  Flamethrower Far": { , "startup": 19, "totalframes": 70, "landinglag": '--', "notes": Startup and total frames are the minimum.Endlag is 27 from extended use, "basedamage": 1.0, "shieldlag": 4, "shieldstun": 2, "whichhitbox": Far, "advantage": -24, "activeframes": --},
-                "Side -B  Flare-Blitz": { , "startup": 23, "totalframes": 101, "landinglag": '--',"basedamage":18.0,"shieldlag":15,"shieldstun":6,"whichhitbox":'--',"advantage":-52,"activeframes":23—52},	
-                    "Up -B  Fly": { , "startup": 9, "totalframes": '--', "landinglag": 30, "notes": Super armor on frame 4 - 15, "basedamage": 5.0 / 2.0 / 4.0, "shieldlag": 6, "shieldstun": 6, "whichhitbox": '--', "advantage": -100, "activeframes": 9—10 / 16 / 19 / 22 / 25 / 27—28 },
-                    "Down -B  Pokemon Change": { , "startup": 1, "totalframes": 39, "landinglag": '--', "notes": Invulnerable on frame 1 - 25. ~140 frame period before you can change again., "basedamage": '--', "shieldlag": '--', "shieldstun": '--', "whichhitbox": '--', "advantage": -39, "activeframes":**, "moves":
-        },
-        "Grab": { , "startup": 8, "advantage": 100, "totalframes": 39, "landinglag": '--', "notes": '--', "basedamage": '--' },
-        "Dash  Grab": { , "startup": 11, "totalframes": 45, "landinglag": '--', "advantage": 100, "notes": '--', "basedamage": '--' },
-        "Pivot Grab": { , "startup": 12, "advantage": 100, "totalframes": 42, "landinglag": '--', "notes": '--', "basedamage": '--' }
+                "Ice Climbers (Both)": {
+                    "Jab 1": {
+                        "startup": 4, "totalframes": 27, "landinglag": 0, "basedamage": 2.0, "shieldlag": 6, "shieldstun": 3, "advantage": -15
+                    },
+                    "Jab 2": {
+                        "startup": 4, "totalframes": 29, "landinglag": 0, "basedamage": 3.5, "shieldlag": 9, "shieldstun": 4, "advantage": -12
+                    },
+                    "Forward Tilt": {
+                        "startup": 9, "totalframes": 29, "landinglag": 0, "basedamage": 6.7, "shieldlag": 76, "shieldstun": 97, "advantage": -10
+                    },
+                    "Up Tilt Multi": {
+                        "startup": 8, "totalframes": 48, "landinglag": 0, "basedamage": 0.8, "shieldlag": 4, "shieldstun": 2, "advantage": -10
+                    },
+                    "Up Tilt Final": {
+                        "startup": 27, "totalframes": 48, "landinglag": 0, "basedamage": 4.50, "shieldlag": 11, "shieldstun": 5, "advantage": -10
+                    },
+                    "Down Tilt": {
+                        "startup": 8, "totalframes": 30, "landinglag": 0, "basedamage": 6.0, "shieldlag": 6, "shieldstun": 6, "advantage": -10
+                    },
+                    "Dash Attack": {
+                        "startup": 11, "totalframes": 41, "landinglag": 0, "basedamage": 6.0, "shieldlag": 6, "shieldstun": 6, "advantage": -18
+                    },
+                    "Forward Smash": {
+                        "startup": 11, "totalframes": 46, "landinglag": 0, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 8, "advantage": -22
+                    },
+                    "Up Smash": {
+                        "startup": 12, "totalframes": 49, "landinglag": 0, "basedamage": 11.0, "shieldlag": 8, "shieldstun": 8, "advantage": -24
+                    },
+                    "Down Smash Front": {
+                        "startup": 9, "totalframes": 40, "landinglag": 0, "basedamage": 13.0, "shieldlag": 9, "shieldstun": 9, "advantage": -17
+                    },
+                    "Down Smash Back": {
+                        "startup": 16, "totalframes": 40, "landinglag": 0, "basedamage": 13.0, "shieldlag": 9, "shieldstun": 9, "advantage": -17
+                    },
+                    "Neutral Air": {
+                        "startup": 6, "totalframes": 45, "landinglag": 7, "basedamage": 7.0, "shieldlag": 7, "shieldstun": 3, "advantage": +2
+                    },
+                    "Forward Air": {
+                        "startup": 19, "totalframes": 56, "landinglag": 10, "basedamage": 12.0, "shieldlag": 9, "shieldstun": 5, "advantage": +3
+                    },
+                    "Back Air": {
+                        "startup": 8, "totalframes": 35, "landinglag": 7, "basedamage": 10.0, "shieldlag": 8, "shieldstun": 4, "advantage": +0
+                    },
+                    "Up Air": {
+                        "startup": 7, "totalframes": 35, "landinglag": 14, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 4, "advantage": -3
+                    },
+                    "Down Air": {
+                        "startup": 12, "totalframes": 63, "landinglag": 20, "basedamage": 8.0, "shieldlag": 7, "shieldstun": 4, "advantage": -12
+                    },
+                    "Neutral B Ice Shot": {
+                        "startup": 18, "totalframes": 55, "landinglag": 0, "basedamage": 3.5, "shieldlag": 5, "shieldstun": 2, "advantage": -24
+                    },
+                    "Side B Squal Hammer Multi": {
+                        "startup": 10, "totalframes": 77, "landinglag": 29, "basedamage": 2.0, "shieldlag": 4, "shieldstun": 3, "advantage": -23
+                    },
+                    "Side B Squal Hammer Final": {
+                        "startup": 51, "totalframes": 77, "landinglag": 29, "basedamage": 4.0, "shieldlag": 8, "shieldstun": 5, "advantage": -21
+                    },
+                    "Up B Belay": {
+                        "startup": 16, "totalframes": 0, "landinglag": 30, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 14, "advantage": 0
+                    },
+                    "Down B –Blizzard": {
+                        "startup": 16, "totalframes": 84, "landinglag": 0, "basedamage": 1.7, "shieldlag": 4, "shieldstun": 2, "advantage": -15
+                    },
+                    "Grab": {
+                        "startup": 8, "totalframes": 39, "landinglag": 0, "advantage": 100, "basedamage": 0
+                    },
+                    "Dash/Turnaround Grab": {
+                        "startup": 10, "totalframes": 47, "landinglag": 0, "advantage": 100, "basedamage": 0
+                    },
+                    "Pivot Grab": {
+                        "startup": 10, "totalframes": 40, "landinglag": 0, "advantage": 100, "basedamage": 0
+                    }
                 },
+                "Ice Climbers (Just Popo)": {
+                    "Jab 1 ": {
+                        "startup": 4, "totalframes": 27, "landinglag": 0, "basedamage": 1.5, "shieldlag": 6, "shieldstun": 3, "advantage": -20
+                    },
+                    "Jab 2 ": {
+                        "startup": 4, "totalframes": 29, "landinglag": 0, "basedamage": 3.6, "shieldlag": 9, "shieldstun": 4, "advantage": -21
+                    },
+                    "Forward Tilt ": {
+                        "startup": 9, "totalframes": 29, "landinglag": 0, "basedamage": 9.06, "shieldlag": 76, "shieldstun": 97, "advantage": -14
+                    },
+                    "Up Tilt Multi ": {
+                        "startup": 8, "totalframes": 48, "landinglag": 0, "basedamage": 0.6, "shieldlag": 4, "shieldstun": 2, "advantage": -16
+                    },
+                    "Up Tilt Final ": {
+                        "startup": 27, "totalframes": 48, "landinglag": 0, "basedamage": 3.0, "shieldlag": 10, "shieldstun": 4, "advantage": -16
+                    },
+                    "Down Tilt ": {
+                        "startup": 8, "totalframes": 30, "landinglag": 0, "basedamage": 4.5, "shieldlag": 5, "shieldstun": 5, "advantage": -16
+                    },
+                    "Dash Attack ": {
+                        "startup": 11, "totalframes": 41, "landinglag": 0, "basedamage": 4.5, "shieldlag": 5, "shieldstun": 5, "advantage": -24
+                    }, "Forward Smash ": {
+                        "startup": 11, "totalframes": 46, "landinglag": 0, "basedamage": 12.0, "shieldlag": 7, "shieldstun": 7, "advantage": -27
+                    },
+                    "Forward Smash ": {
+                        "startup": 11, "totalframes": 46, "landinglag": 0, "basedamage": 12.0, "shieldlag": 7, "shieldstun": 7, "advantage": -27
+                    },
+                    "Up Smash ": {
+                        "startup": 12, "totalframes": 49, "landinglag": 0, "basedamage": 8.2, "shieldlag": 7, "shieldstun": 6, "advantage": -29
+                    },
+                    "Down Smash Front ": {
+                        "startup": 9, "totalframes": 40, "landinglag": 0, "basedamage": 9.7, "shieldlag": 8, "shieldstun": 7, "advantage": -22
+                    },
+                    "Down Smash Back ": {
+                        "startup": 16, "totalframes": 40, "landinglag": 0, "basedamage": 9.7, "shieldlag": 8, "shieldstun": 7, "advantage": -22
+                    },
+                    "Neutral Air ": {
+                        "startup": 6, "totalframes": 45, "landinglag": 7, "basedamage": 5.2, "shieldlag": 6, "shieldstun": 3, "advantage": -4
+                    },
+                    "Forward Air ": {
+                        "startup": 19, "totalframes": 56, "landinglag": 10, "basedamage": 9.0, "shieldlag": 7, "shieldstun": 4, "advantage": -5
+                    },
+                    "Back Air ": {
+                        "startup": 8, "totalframes": 35, "landinglag": 7, "basedamage": 7.5, "shieldlag": 7, "shieldstun": 3, "advantage": -3
+                    },
+                    "Up Air ": {
+                        "startup": 7, "totalframes": 35, "landinglag": 14, "basedamage": 6.7, "shieldlag": 6, "shieldstun": 3, "advantage": -10
+                    },
+                    "Down Air ": {
+                        "startup": 12, "totalframes": 63, "landinglag": 20, "basedamage": 6.0, "shieldlag": 6, "shieldstun": 3, "advantage": -16
+                    },
+                    "Neutral B Ice Shot ": {
+                        "startup": 18, "totalframes": 55, "landinglag": 0, "basedamage": 3.5, "shieldlag": 5, "shieldstun": 2, "advantage": -29
+                    },
+                    "Side B Squal Hammer  Multi": {
+                        "startup": 10, "totalframes": 77, "landinglag": 29, "basedamage": 1.2, "shieldlag": 4, "shieldstun": 3, "advantage": -24
+                    },
+                    "Side B Squal Hammer  Final": {
+                        "startup": 49, "totalframes": 77, "landinglag": 29, "basedamage": 2.0, "shieldlag": 4, "shieldstun": 3, "advantage": -24
+                    },
+                    "Up B Belay": {
+                        "startup": 16, "totalframes": 0, "landinglag": 30, "basedamage": 16.0, "shieldlag": 10, "shieldstun": 14, "advantage": 0
+                    },
+                    "Down B –Blizzard ": {
+                        "startup": 16, "totalframes": 84, "landinglag": 0, "basedamage": 1.7, "shieldlag": 4, "shieldstun": 2, "advantage": -22
+                    },
+                    "Grab": {
+                        "startup": 8, "totalframes": 39, "landinglag": 0, "advantage": 100, "basedamage": 0
+                    },
+                    "Dash/Turnaround Grab": {
+                        "startup": 10, "totalframes": 47, "landinglag": 0, "advantage": 100, "basedamage": 0
+                    },
+                }
 
-            }
-        return data[name];
+            }//data
+            return data[name];
         }
 
 
@@ -174,15 +508,15 @@
                     out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
                     for (var i = 0; i < arrU.length; i++) {
                         tempMove = p2[arrU[i]].startup;
-                        if (arrU[i].includes("Air") && !arrU[i].includes("BAir")) {
+                        if (arrU[i].includes("Forward Air") || arrU[i].includes("Back Air") || arrU[i].includes("Down Air") || arrU[i].includes("Up Air") || arrU[i].includes("Z-Air") || arrU[i].includes("Neutral Air")) {
                             tempMove += 3;
                         }//if aerial
                         else {
-                            if (arrU[i] == ("UpSmash") || arrU[i] == ("Grab") || arrU[i] == ("UpB")) {
+                            if (arrU[i].includes("Up Smash") || arrU[i].includes("Up B")) {
                                 tempMove += 0;
                             } //if no oos lag
                             else {
-                                if (arrU[i].includes("Dash") || arrU[i].includes("Turnaround")) {
+                                if (arrU[i].includes("Dash Attack") || arrU[i].includes("Turnaround") || arrU[i].includes("Dash Grab")) {
                                     tempMove += 12;
                                 }//if requires initial dash
                                 else {
@@ -190,8 +524,13 @@
                                         tempMove += 13;
                                     }//if pivot grab
                                     else {
-                                        tempMove += 11;
-                                    }//if normal move
+                                        if (arrU[i] == ("Grab")) {
+                                            tempMove += 4;
+                                        }//if shield grab
+                                        else {
+                                            tempMove += 11;
+                                        }//if move is a tilt, or smash attack that is not an up smash, or a special that is not up b
+                                    }//if move is not a pivot grab
                                 }//if does not require initial dash (fuck you dylan I know pivot grab requires initial dash)
                             }//if has oos lag
                         }//if not aerial
@@ -249,6 +588,8 @@
                         <option value="DK">Donkey Kong</option>
                         <option value="DuckHunt">Duck Hunt</option>
                         <option value="Greninja">Greninja</option>
+                        <option value="Ice Climbers (Both)">Ice Climbers (Both)</option>
+                        <option value="Ice Climbers (Both)">Ice Climbers (Just Popo)</option>
                         <option value="Ike">Ike</option>
                         <option value="Incineroar">Incineroar</option>
                         <option value="Joker">Joker</option>
@@ -363,6 +704,8 @@
                         <option value="DK">Donkey Kong</option>
                         <option value="DuckHunt">Duck Hunt</option>
                         <option value="Greninja">Greninja</option>
+                        <option value="Ice Climbers (Both)">Ice Climbers (Both)</option>
+                        <option value="Ice Climbers (Both)">Ice Climbers (Just Popo)</option>
                         <option value="Ike">Ike</option>
                         <option value="Incineroar">Incineroar</option>
                         <option value="Joker">Joker</option>
