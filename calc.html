@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Smash Ultimate Ruleset Generator</title>
+    <meta name="description" content="Ruleset Generator for Friendlies in Smash Ultimate">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript">
+
+        //rng to choose stocks, time, or stamina
+        //rng to choose how many stocks nd how much time if stocks is chosen, or how much time if time is chosen, or how much stamina and stocks and time if stamina is chosen
+        //style, fs meter, spirits, damage handicap (off, auto, on), Stage selection (anyone, take turns, Loser's pick, in order, random, random omega, random battlefield), 
+        //items(none. low, medium, high) if not set to "none" then choose each individual item that will be turned on
+        //Stages, First to 1-5 wins, Stage morph (off, random, 30 second intervals from 1 minute to 5 minutes)
+        //Stage Hazards on/off, team attack on/off, launch rate (.5 to 2.0), Underdog Boost, Pausing, Score Display, Show damage
+
+
+
+
+
+        function getMove() {
+            items = ["Assist Trophy", "Back Shield", "Banana Gun", "Banana Peel", "Beam Sword", "Beastball", "Beehive", "Beetle", "Black Hole", "Blast Box", "Bob-omb", "Bombchu", "Bomber", "Boomerang", "Boss Galaga", "Bullet Bill", "Bunny Hood", "Cucco", "Daybreak", "Death's Scythe", "Deku Nut", "Dragoon", "Drill", "Fairy Bottle", "Fake Smash Ball", "Fire Bar", "Fire Flower", "Food", "Franklin Badge", "Freezie", "Golden Hammer", "Gooey Bomb", "Gust Bellows", "Hammer", "Healing Field", "Healing Sprout", "Heart Container", "Hocotate Bomb", "Home-run Bat", "Hothead", "Killer Eye", "Lightning Bolt", "Lip's Stick", "Master Ball", "Maxim Tomato", "Metal Box", "Motion-Sensor Bomb", "Ore Club", "Pitfall", "Poison Mushroom", "Poké Ball", "POW Block", "Rage Blaster", "Ramblin' Evil Mushroom", "Ray Gun", "Rocket Belt", "Screw Attack", "Smart Bomb", "Smash Ball", "Smoke Ball", "Soccer Ball", "Special Flag", "Spiny Shell", "Staff", "Star Rod", "Steel Diver", "Super Launch Star", "Super Leaf", "Super Mushroom", "Super Scope", "Super Star", "Superspicy Curry", "Timer", "Unira", "Warp Star", "X Bomb Barrel", "Capsule", "Crate", "Grass", "Party Ball", "Rolling Crate", "Sandbag"];//data
+            stages = ["Battlefield", "Big Battlefield", "Final Destination", "New Donk City Hall", "Great Plateau Tower", "Moray Towers", "Dracula's Castle", "Mementos", "Yggdrasil's Altar", "Spiral Mountain", "King of Fighters Stadium ", "Garreg Mach Monestary", "Peach's Castle", "Kongo Jungle", "Hyrule Castle", "Super Happy Tree", "Dream Land", "Saffron City", "Mushroom Kingdom", "Princess Peach's Castle", "Rainbow Cruise", "Kongo Falls", "Jungle Japes", "Great Bay", "Temple", "Brinstar", "Yoshi's Island (Melee)", "Yoshi's Story", "Fountain of Dreams", "Green Greens", "Corneria", "Venom", "Pokémon Stadium", "Onett", "Mushroom Kingdom II", "Brinstar Depths", "Big Blue", "Fourside", "Delfino Plaza", "Mushroomy Kingdom", "Figure-8 Circuit", "WarioWare, Inc.", "Bridge of Eldin", "Norfair", "Frigate Orpheon", "Yoshi's Island", "Halberd", "Lylat Cruise", "Pokémon Stadium 2", "Port Town Aero Dive", "Castle Siege", "Distant Planet", "Smashville", "New Pork City", "Summit", "Skyworld", "Shadow Moses Island", "Luigi's Mansion", "Pirate Ship", "Spear Pillar", "75m", "Mario Bros.", "Green Hill Zone", "3D Land", "Golden Plains", "Paper Mario"];
+            out = "<div class='container' id='inner' style='background-color:#dedede; border-color:#999999; border-width:2px;padding:10px; border-style:solid; height:auto; margin-bottom:-30px'><ul style='margin:auto'>";
+            rng = Math.floor(Math.random() * 3) + 1;
+            if (rng == 1) {
+                out += "Style: Stock";
+                rng = Math.floor(Math.random() * 5) + 1;
+                out += "<br />Stocks: " + rng;
+                rng = Math.floor(Math.random() * 10) + 1;
+                out += "<br />Time: " + rng + ":00";
+            }
+            else if (rng == 2) {
+                out += "Style: Time";
+                rng = Math.floor(Math.random() * 10) + 1;
+                out += "<br />Time: " + rng;
+            }
+            else if (rng == 3) {
+                out += "Style: Stamina";
+                rng = Math.floor(Math.random() * 25) + 1;
+                rng = rng * 10;
+                out += "<br />Stamina: " + rng;
+                rng = Math.floor(Math.random() * 5) + 1;
+                out += "<br />Stocks: " + rng;
+                rng = Math.floor(Math.random() * 10) + 1;
+                out += "<br />Time: " + rng + ":00";
+            }
+            rng = Math.floor(Math.random() * 4) + 1;
+            if (rng == 1) {
+                out += "<br/>FS Meter: On";
+            }
+            else {
+                out += "<br />FS Meter: Off";
+            }
+            rng = Math.floor(Math.random() * 6) + 1;
+            if (rng == 1) {
+                out += "<br/>Spirits: On";
+            }
+            else {
+                out += "<br />Spirits: Off";
+            }
+            rng = Math.floor(Math.random() * 10) + 1;
+            if (rng == 1) {
+                out += "<br/>Damage Handicap: "
+                rng = Math.floor(Math.random() * 2) + 1;
+                if (rng == 1) {
+                    out += "On";
+                }
+                else if (rng == 2) {
+                    out += "Auto";
+                }
+            }
+            else {
+                out += "<br />Damage Handicap: Off"
+            }
+            rng = Math.floor(Math.random() * 7) + 1;
+            stageSelect = true
+            if (rng == 1) {
+                out += "<br/>Stage Selection: Anyone";
+            }
+            else if (rng == 2) {
+                out += "<br/>Stage Selection: Take Turns";
+            }
+            else if (rng == 3) {
+                out += "<br/>Stage Selection: Loser's Pick";
+            }
+            else if (rng == 4) {
+                out += "<br/>Stage Selection: In Order";
+            }
+            else if (rng == 5) {
+                out += "<br/>Stage Selection: Random";
+                stageSelect = false;
+            }
+            else if (rng == 6) {
+                out += "<br/>Stage Selection: Random Omega";
+            }
+            else if (rng == 7) {
+                out += "<br/>Stage Selection: Random Battlefield";
+            }
+            rng = Math.floor(Math.random() * 5) + 1;
+            itemsOn = true;
+            if (rng == 1) {
+                out += "<br /> Items: Low";
+            }
+            else if (rng == 2) {
+                out += "<br /> Items: Medium";
+            }
+            else if (rng == 3) {
+                out += "<br /> Items: High";
+            }
+            else {
+                out += "<br /> Items: None";
+                itemsOn = false
+            }
+            if (itemsOn == true) {
+                out += "<br /> Items: ";
+                for (i = 0; i < items.length; i++) {
+                    rng = Math.floor(Math.random() * 3) + 1;
+                    if (rng == 1) {
+                        out += ", " + items[i];
+                    }
+                }
+                out += "<br />"
+            }
+            out += "<br />Stages: "
+            for (i = 0; i < stages.length; i++) {
+                rng = Math.floor(Math.random() * 2) + 1;
+                if (rng == 1) {
+                    out += ", " + stages[i];
+                }
+            }
+            rng = Math.floor(Math.random() * 12) + 1;
+            if (rng >= 2 && rng <= 5) {
+                out += "<br /> First To " + rng + " Wins"
+            }
+            else {
+                out += "<br /> First To 1 Win"
+            }
+            rng = Math.floor(Math.random() * 5) + 1;
+            if (rng == 1) {
+                rng = Math.floor(Math.random() * 2) + 1;
+                if (rng == 1) {
+                    out += "<br /> Stage Morph: Random"
+                }
+                else {
+                    rng = Math.floor(Math.random() * 10) + 1;
+                    rng = rng * 30;
+                    var quotient = Math.floor(rng / 60);
+                    var remainder = rng % 60;
+                    if (remainder == 0) {
+                        out += "<br /> Stage Morph: Every " + quotient + ":00"
+                    }
+                    else {
+                        out += "<br /> Stage Morph: Every " + quotient + ":30"
+                    }
+                }
+            }
+            else {
+                out += "<br /> Stage Morph: Off"
+            }
+            rng = Math.floor(Math.random() * 2) + 1;
+            if (rng == 1) {
+                out += "<br /> Stage Hazards: On"
+            }
+            else{
+                out += "<br /> Stage Hazards: Off"
+            }
+            rng = Math.floor(Math.random() * 2) + 1;
+            if (rng == 1) {
+                out += "<br /> Team Attack: On"
+            }
+            else{
+                out += "<br /> Team Attack: Off"
+            }
+            rng = Math.floor(Math.random() * 10) + 1;
+            if (rng == 1) {
+                rng = ((Math.floor(Math.random() * 16))*0.1)+.5;
+                rng = Math.round(rng *10) / 10;
+                out+= ("<br />Launch Rate: ")+ rng;
+            }
+            else{
+                out += "<br /> Launch Rate: 1.0"
+            }
+            rng = Math.floor(Math.random() * 2) + 1;
+            if (rng == 1) {
+                out += "<br /> Underdog Boost: On"
+            }
+            else{
+                out += "<br /> Underdog Boost: Off"
+            }
+            rng = Math.floor(Math.random() * 2) + 1;
+            if (rng == 1) {
+                out += "<br /> Score Display: On"
+            }
+            else{
+                out += "<br /> Score Display: Off"
+            }
+            rng = Math.floor(Math.random() * 3) + 1;
+            if (rng == 1) {
+                out += "<br /> Show Damage: No"
+            }
+            else{
+                out += "<br /> Show Damage: Yes"
+            }
+            document.getElementById("output").innerHTML = out + "</ul></div>";
+
+        }//function
+
+
+        //ChangeSecondList(document.getElementById("char1").options[document.getElementById("char1").selectedIndex].value);
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1><strong><a href="index.html">Drexel Smash Ultimate</a></strong></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Discord Link</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="improve.html">Get Good</a></li>
+                <li><a href="calc.html">Ruleset Generator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+        <header class="major special" style="text-align:center">
+            <h2>Ruleset Generator</h2>
+            <div class="container">
+            <p style = "color: black; font-size: 20pt;">What's up y'all. This here is my ruleset generator that I made to piss off people while playing friendlies. Click "Submit" and the program will automatially generate a random ruleset for you to use.
+                Enjoy playing on rulesets including, but not limited to:
+                <br>10 Stock, 0.5 Launch Rate, Items: None, on Palutena's Temple
+                <br>1 Minute, 2.0 Launch Rate, Items: High, on WarioWare
+                <br>10 Stamina, Items: Medium, on Gamer, Stage Hazards: On
+                <br>AND MORE!!!!
+            </p>
+            <p style = "color: black; font-size: 12pt;">
+                Note that you don't NEED to put in all of the stages for Random stage select unless you really want to, or if you got "Random" for stage selection
+            </p>
+        </div>
+        </header>
+        <div class="container">
+            <form id="set" action="/calc.html">
+                <div class="12u$">
+                    <ul class="actions" style="float:center; width:100%">
+                        <li><input type="button" value="submit" style="float:center; width:100%" class="special"
+                                onclick="getMove()"></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="container" id="output">
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" style="margin-top:50px">
+        <div class="container">
+            <ul class="copyright">
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+                <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="jquery.min.js"></script>
+    <script src="skel.min.js"></script>
+    <script src="util.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
