@@ -1,0 +1,43 @@
+33.333% chance for each game mode: Stock, Style, and Time
+
+25% chance for FS Meter to be on
+75% chance for FS Meter to be off
+
+16.666% chance for spirits to be on
+83.3333% chance for Spirits off
+
+10% chance for Damage Handicap to be on, with a 50% chance for either "On" or "Auto" to be the mode.
+90% chance for Damage Handicap to be off
+
+14.28% for each of the 7 possible choices for "Stage Selection" 
+
+20% chance for Items to be Low
+20% chance for Items to be Medium
+20% chance for Items to be High
+40% chance for items to be Off
+33.3333% chance for each individual item to be on (it loops through the array of items and there is a 1/3 chance that it toggles each individual item in the array)
+
+50% chance for each individual stage to be toggled on in random stage select
+
+66.666% chance for it to be First to 1 Win (normal)
+33.333% chance for it to be First to 2-5 wins (8.333% chance individually)
+
+20% chance for Stage Morph to be on, with a 50% chance for it to either be "Random" or set at a time interval, which is also a randomly generated number between 1 minute and 5 minutes
+80% chance for Stage Morph to be off
+
+50% chance for stage hazards to be on or off
+
+50% chance for Team Attack to be on or off
+
+10% chance for launch rate 
+
+90% chance for launch rate to be 1.0
+10% chance for launch rate to be randomly generated from 0.5 to 2.0 (1.0 is possible with this, so there is a 6.25% chance you'll still get 1.0 launch rate even after getting the 10% chance for it to randomly generate)
+
+10% chance for underdog boost to be on
+90% chance for underdog boost to be off
+
+50% chance for score display to be on or off
+
+33.333% chance for Show Damage to be off
+66.666% chance for Show Damage to be on
